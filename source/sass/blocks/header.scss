@@ -1,0 +1,109 @@
+.page-header {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-image: url("../img/header/bg-desktop@1x.jpg");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/header/bg-desktop@2x.jpg");
+  }
+
+  width: 100%;
+
+  /////
+  //width: 1366px;
+  margin: 0 auto;
+  /////
+  height: 879px;
+  flex-grow: 1;
+}
+
+.page-header__wrapper {
+  max-width: 1366px;
+  box-sizing: border-box;
+  padding: 32px 114px 0 110px;
+  margin: 0 auto;
+
+  &:after {
+    display: block;
+    content: "";
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-image: url("../img/header/israel-desktop@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/header/israel-desktop@2x.png");
+    }
+
+    //width: 1018px;
+    width: 100%;
+    height: 340px;
+
+    margin: 0 auto;
+    margin-top: 57px;
+  }
+}
+
+.page-header__contact {
+  position: relative;
+  top: -36px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.page-header__contact a{
+  text-decoration: none;
+  color: $black;
+}
+
+.page-header__contact-callback {
+  font-variant: small-caps;
+  border-bottom: 1px dashed #484848;
+  cursor: pointer;
+}
+
+.page-header__intro {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-image: url("../img/header/girl-desktop@1x.png");
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/header/girl-desktop@2x.png");
+  }
+
+  width: 381px;
+  //width: 100%;
+  min-height: 609px;
+
+  position: relative;
+  top: -397px;
+  left: 22px;
+
+  margin: 0 auto;
+  margin-top: 55px;
+
+}
+
+.page-header__intro p{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #FFFFFF;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  width: 343px;
+  margin: 0 auto;
+  position: relative;
+  top: 381px;
+  left: -22px;
+}
+
+
+
+@media (max-width: $mobile-max-width) {
+
+}
