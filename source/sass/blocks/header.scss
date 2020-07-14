@@ -27,22 +27,46 @@
   &:after {
     display: block;
     content: "";
-    background-size: 100% auto;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position-x: center;
-    background-image: url("../img/header/israel-desktop@1x.png");
+    background-position: top, bottom;
+    background-image: url("../img/header/israel-desktop@1x.png"), url("../img/header/girl-desktop@1x.png");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/header/israel-desktop@2x.png");
+      background-image: url("../img/header/israel-desktop@2x.png"), url("../img/header/girl-desktop@2x.png");
     }
 
     //width: 1018px;
     width: 100%;
-    height: 340px;
+    height: 609px;
 
     margin: 0 auto;
     margin-top: 57px;
   }
+
+  //&:after {
+  //  display: block;
+  //  content: "";
+  //  background-size: contain;
+  //  background-repeat: no-repeat;
+  //  background-position-x: center;
+  //  background-image: url("../img/header/girl-desktop@1x.png");
+  //
+  //  @media (min-resolution: $retina-dppx) {
+  //    background-image: url("../img/header/girl-desktop@2x.png");
+  //  }
+  //
+  //  //width: 381px;
+  //  width: 100%;
+  //  max-height: 609px;
+  //
+  //  //position: relative;
+  //  //top: -397px;
+  //  //left: 22px;
+  //
+  //  margin: 0 auto;
+  //  //margin-top: 55px;
+  //}
 }
 
 .page-header__contact {
@@ -67,25 +91,45 @@
 }
 
 .page-header__intro {
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-image: url("../img/header/girl-desktop@1x.png");
-
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/header/girl-desktop@2x.png");
-  }
-
-  width: 381px;
+  //background-size: contain;
+  //background-repeat: no-repeat;
+  //background-position-x: center;
+  //background-image: url("../img/header/girl-desktop@1x.png");
+  //
+  //@media (min-resolution: $retina-dppx) {
+  //  background-image: url("../img/header/girl-desktop@2x.png");
+  //}
+  //
+  ////width: 381px;
   //width: 100%;
-  min-height: 609px;
+  //height: 609px;
+  //
+  ////position: relative;
+  ////top: -397px;
+  ////left: 22px;
+  //
+  //margin: 0 auto;
+  ////margin-top: 55px;
 
-  position: relative;
-  top: -397px;
-  left: 22px;
+  &:after {
+    position: relative;
+    display: block;
+    content: "";
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-image: url("../img/header/scroll-desktop@1x.png");
+    width: 76px;
+    height: 132px;
+    margin: 0 auto;
+    top: 412px;
+    left: -20px;
 
-  margin: 0 auto;
-  margin-top: 55px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/header/scroll-desktop@2x.png");
+    }
+  }
 
 }
 
@@ -102,8 +146,110 @@
   left: -22px;
 }
 
-
-
 @media (max-width: $mobile-max-width) {
+
+  .page-header {
+    background-image: url("../img/header/bg-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/header/bg-mobile@2x.jpg");
+    }
+
+    //width: 100%;
+
+    /////
+    width: 320px;
+    /////
+    height: 636px;
+
+  }
+
+  .page-header__wrapper {
+    max-width: 767px;
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &:after {
+      background-image: url("../img/header/israel-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/header/israel-mobile@2x.png");
+      }
+
+      width: 347px;
+      height: 122px;
+
+      margin-top: 103px;
+    }
+  }
+
+  .page-header__logo {
+    padding-left: 16px;
+  }
+
+  .page-header__logo-img {
+    width: 120px;
+    height: 42px;
+
+  }
+
+  .page-header__contact {
+    padding-right: 7px;
+
+    top: 0;
+
+    justify-content: right;
+    flex-direction: column;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .page-header__contact a{
+    text-decoration: none;
+    color: $black;
+  }
+
+  .page-header__contact-callback {
+    text-align: right;
+    width: 109px;
+    margin-top: 7px;
+    margin-left: 17px;
+
+  }
+
+  .page-header__intro {
+    background-image: url("../img/header/girl-mobile@1x.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/header/girl-mobile@2x.png");
+    }
+
+    width: 320px;
+    min-height: 605px;
+
+    position: relative;
+    top: -260px;
+    left: 0;
+
+    margin-top: 0;
+
+    &:after {
+      top: 335px;
+      left: 0;
+    }
+
+  }
+
+  .page-header__intro p{
+    font-size: 20px;
+    line-height: 24px;
+    width: 288px;
+
+    top: 305px;
+    left: 0;
+  }
 
 }

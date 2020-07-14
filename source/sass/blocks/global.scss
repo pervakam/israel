@@ -22,6 +22,8 @@ body {
 @media (max-width: $mobile-max-width) {
   body {
     min-width: $mobile-min-width;
+
+    //background: url("../img/phone 320.jpg") no-repeat 50% 0;
   }
 }
 

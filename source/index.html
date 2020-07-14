@@ -69,7 +69,11 @@
   <div class="page-header__wrapper">
     <a class="page-header__logo">
       <span class="visually-hidden">Masa - путешествие в Израиль</span>
-      <img src="img/header/logo-header-desktop@1x.png">
+      <picture>
+        <source media="(max-width: 767px)"
+                srcset="img/header/logo-header-desktop@1x.png 1x, img/header/logo-header-desktop@2x.png 2x">
+        <img class="page-header__logo-img" src="img/header/logo-header-desktop@1x.png" srcset="img/header/logo-header-desktop@2x.png 2x" alt="Маса-путешествие в Израиль">
+      </picture>
     </a>
     <div class="page-header__contact">
       <a href="tel:+(972)2–621–6581">+ (972) 2 – 621 – 6581</a>
