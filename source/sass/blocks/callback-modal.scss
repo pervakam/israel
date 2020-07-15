@@ -1,0 +1,214 @@
+.callback-modal {
+  position: absolute;
+  z-index: 100;
+  padding: 56px 48px 40px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  text-align: left;
+  width: 480px;
+  box-shadow: 0 5px 10px 0 $black;
+  border-radius: 8px;
+
+  left: calc(50% - 240px);
+  top: calc(50% - 360px);
+}
+
+.callback-modal h2 {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+  color: $blue;
+  margin: 0;
+}
+
+.callback-modal__close {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: -442px;
+  left: 429px;
+  right: 0;
+  bottom: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: $yellow;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.callback-modal p {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 26px;
+  opacity: 0.87;
+  margin-bottom: 32px;
+}
+
+.callback-modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.callback-modal__form input {
+  border: 2px solid #E3E3E3;
+  border-radius: 80px;
+  box-sizing: border-box;
+  padding: 19px 0 20px 40px;
+  margin-bottom: 8px;
+  width: 360px;
+}
+
+.callback-modal__form button {
+  background: $gradient;
+  border-radius: 80px;
+  border: none;
+  padding: 19px 5px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  font-variant: small-caps;
+  width: 264px;
+  margin: 14px auto 4px;
+
+}
+
+.callback-modal input[name="agree"] {
+  margin: 0;
+}
+
+.callback-modal input[type="checkbox"] {
+  opacity: 0;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    opacity: 0.74;
+    margin-left: 85px;
+    display: flex;
+    justify-content: left;
+
+    &::before {
+      cursor: pointer;
+      display: inline-block;
+      content: "";
+      position: absolute;
+      left: -24px;
+      width: 12px;
+      height: 12px;
+      border: 2px solid $yellow;
+      border-radius: 2px;
+    }
+  }
+
+  &:checked + label {
+    &::after {
+      cursor: pointer;
+      display: inline-block;
+      content: "";
+      position: absolute;
+      left: -19px;
+      top: 2px;
+      width: 4px;
+      height: 8px;
+      border: solid $yellow;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg)
+    }
+  }
+}
+
+//.catalog-popup__closed {
+//  display: none;
+//}
+//
+//.catalog-popup__title {
+//  font-size: 25px;
+//  font-weight: bold;
+//  text-transform: uppercase;
+//  line-height: 1.2;
+//  padding: 0 55px;
+//  margin: 0;
+//}
+//
+//.catalog-popup__size {
+//  font-size: 15px;
+//  color: #444444;
+//}
+//
+//.catalog-popup__size-list {
+//  display: flex;
+//  margin: 0;
+//  padding: 0;
+//  justify-content: space-between;
+//}
+//
+//.catalog-popup__option-radio {
+//  display: block;
+//  box-sizing: border-box;
+//  font-size: 17px;
+//  font-weight: bold;
+//  padding: 16px 0;
+//  border: 2px solid #ececec;
+//  line-height: 1;
+//  cursor: pointer;
+//  height: 52px;
+//  width: 82px;
+//
+//  &:hover {
+//    border: 2px solid #444444;
+//  }
+//}
+//
+//.catalog-popup__input-radio:checked + .catalog-popup__option-radio {
+//  border: 2px solid #62d1ba;
+//}
+//
+//.catalog-popup__input-radio {
+//  display: none;
+//}
+//
+//.catalog-popup__order {
+//  width: 100%;
+//  margin: 0;
+//  border: 0;
+//  background-color: $seafoam-blue;
+//  color: #ffffff;
+//  margin-top: 31px;
+//}
+//
+//@media (min-width: $tablet-width) {
+//  .catalog-popup {
+//    padding: 51px 100px 46px;
+//    margin-left: -283px;
+//    width: 566px;
+//  }
+//
+//  .catalog-popup__title {
+//    font-size: 30px;
+//    padding: 0;
+//  }
+//
+//  .catalog-popup__option-radio {
+//    width: 112px;
+//  }
+//}
