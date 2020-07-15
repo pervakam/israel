@@ -1,20 +1,6 @@
 .page-header {
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position-y: top;
-  background-image: url("../img/header/bg-desktop@1x.jpg");
-
-  @media (min-resolution: $retina-dppx) {
-    background-image: url("../img/header/bg-desktop@2x.jpg");
-  }
-
   width: 100%;
-
-  /////
-  //width: 1366px;
   margin: 0 auto;
-  /////
-  height: 879px;
   flex-grow: 1;
 }
 
@@ -23,50 +9,13 @@
   box-sizing: border-box;
   padding: 32px 114px 0 110px;
   margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
 
-  &:after {
-    display: block;
-    content: "";
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top, bottom;
-    background-image: url("../img/header/israel-desktop@1x.png"), url("../img/header/girl-desktop@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/header/israel-desktop@2x.png"), url("../img/header/girl-desktop@2x.png");
-    }
-
-    //width: 1018px;
-    width: 100%;
-    height: 609px;
-
-    margin: 0 auto;
-    margin-top: 57px;
-  }
-
-  //&:after {
-  //  display: block;
-  //  content: "";
-  //  background-size: contain;
-  //  background-repeat: no-repeat;
-  //  background-position-x: center;
-  //  background-image: url("../img/header/girl-desktop@1x.png");
-  //
-  //  @media (min-resolution: $retina-dppx) {
-  //    background-image: url("../img/header/girl-desktop@2x.png");
-  //  }
-  //
-  //  //width: 381px;
-  //  width: 100%;
-  //  max-height: 609px;
-  //
-  //  //position: relative;
-  //  //top: -397px;
-  //  //left: 22px;
-  //
-  //  margin: 0 auto;
-  //  //margin-top: 55px;
-  //}
+.page-header__logo-img {
+  width: 137px;
+  height: 48px;
 }
 
 .page-header__contact {
@@ -79,137 +28,96 @@
   line-height: 18px;
 }
 
-.page-header__contact a{
+.page-header__contact a {
   text-decoration: none;
   color: $black;
+
+  &:hover {
+    color: $yellow;
+  }
 }
 
 .page-header__contact-callback {
   font-variant: small-caps;
   border-bottom: 1px dashed #484848;
   cursor: pointer;
+
+  &:hover {
+    border-bottom: 1px dashed $yellow;
+  }
 }
 
 .page-header__intro {
-  //background-size: contain;
-  //background-repeat: no-repeat;
-  //background-position-x: center;
-  //background-image: url("../img/header/girl-desktop@1x.png");
-  //
-  //@media (min-resolution: $retina-dppx) {
-  //  background-image: url("../img/header/girl-desktop@2x.png");
-  //}
-  //
-  ////width: 381px;
-  //width: 100%;
-  //height: 609px;
-  //
-  ////position: relative;
-  ////top: -397px;
-  ////left: 22px;
-  //
-  //margin: 0 auto;
-  ////margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+}
 
-  &:after {
-    position: relative;
-    display: block;
-    content: "";
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-image: url("../img/header/scroll-desktop@1x.png");
-    width: 76px;
-    height: 132px;
-    margin: 0 auto;
-    top: 412px;
-    left: -20px;
+.page-header__intro-pic {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 906px;
+  margin-top: -102px;
 
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/header/scroll-desktop@2x.png");
-    }
-  }
-
+  object-fit: cover;
 }
 
 .page-header__intro p{
+  position: relative;
+  z-index: 10;
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
   color: #FFFFFF;
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
   width: 343px;
-  margin: 0 auto;
+  margin: -370px auto 0;
+  text-align: center;
+
+}
+
+.page-header__intro svg {
   position: relative;
-  top: 381px;
-  left: -22px;
+  z-index: 10;
+  margin: 31px auto;
+  cursor: pointer;
+
+  &:hover circle{
+    stroke: $yellow;
+  }
 }
 
 @media (max-width: $mobile-max-width) {
 
-  .page-header {
-    background-image: url("../img/header/bg-mobile@1x.jpg");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/header/bg-mobile@2x.jpg");
-    }
-
-    //width: 100%;
-
-    /////
-    width: 320px;
-    /////
-    height: 636px;
-
-  }
-
   .page-header__wrapper {
     max-width: 767px;
-    padding: 20px 0 0 0;
+    padding: 20px 0 0 15px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
-    &:after {
-      background-image: url("../img/header/israel-mobile@1x.png");
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/header/israel-mobile@2x.png");
-      }
-
-      width: 347px;
-      height: 122px;
-
-      margin-top: 103px;
-    }
-  }
-
-  .page-header__logo {
-    padding-left: 16px;
   }
 
   .page-header__logo-img {
     width: 120px;
     height: 42px;
-
   }
 
   .page-header__contact {
     padding-right: 7px;
-
     top: 0;
-
     justify-content: right;
     flex-direction: column;
-
     font-size: 14px;
     line-height: 17px;
   }
 
-  .page-header__contact a{
+  .page-header__contact a {
     text-decoration: none;
     color: $black;
+
+    &:hover {
+      color: $yellow;
+    }
   }
 
   .page-header__contact-callback {
@@ -217,39 +125,30 @@
     width: 109px;
     margin-top: 7px;
     margin-left: 17px;
-
   }
 
-  .page-header__intro {
-    background-image: url("../img/header/girl-mobile@1x.png");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/header/girl-mobile@2x.png");
-    }
-
-    width: 320px;
-    min-height: 605px;
-
-    position: relative;
-    top: -260px;
-    left: 0;
-
-    margin-top: 0;
-
-    &:after {
-      top: 335px;
-      left: 0;
-    }
-
+  .page-header__intro-pic {
+    height: 605px;
+    margin-top: -35px;
   }
 
-  .page-header__intro p{
+  .page-header__intro p {
     font-size: 20px;
     line-height: 24px;
     width: 288px;
-
-    top: 305px;
-    left: 0;
+    margin: -305px auto 0;
   }
 
+  .page-header__intro svg {
+    position: relative;
+    z-index: 10;
+    margin: 31px auto;
+    cursor: pointer;
+
+    &:hover circle {
+      stroke: $yellow;
+    }
+  }
 }
+
+
