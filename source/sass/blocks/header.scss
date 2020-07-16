@@ -63,7 +63,7 @@
   object-fit: cover;
 }
 
-.page-header__intro p{
+.page-header__intro p {
   position: relative;
   z-index: 10;
   font-weight: bold;
@@ -83,8 +83,20 @@
   margin: 31px auto;
   cursor: pointer;
 
-  &:hover circle{
+  &:hover circle {
     stroke: $yellow;
+  }
+
+  &:hover rect {
+    animation: bounce 1s infinite linear;
+    @keyframes bounce {
+      0% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(10%);
+      }
+    }
   }
 }
 
