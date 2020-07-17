@@ -1,10 +1,10 @@
 .callback-modal {
   position: absolute;
   z-index: 100;
-  padding: 56px 48px 40px;
+  padding: 26px 50px 40px;
   background-color: #ffffff;
   box-sizing: border-box;
-  text-align: left;
+  text-align: right;
   width: 480px;
   box-shadow: 0 5px 10px 0 $black;
   border-radius: 8px;
@@ -25,17 +25,14 @@
   letter-spacing: -0.02em;
   color: $blue;
   margin: 0;
+  text-align: left;
 }
 
 .callback-modal__close {
   border: 0;
   padding: 0;
+  margin-bottom: 18px;
   cursor: pointer;
-  position: absolute;
-  top: -442px;
-  left: 429px;
-  right: 0;
-  bottom: 0;
   outline: none;
 
   &::before,
@@ -62,6 +59,7 @@
   line-height: 26px;
   opacity: 0.87;
   margin-bottom: 32px;
+  text-align: left;
 }
 
 .callback-modal__form {
@@ -123,6 +121,7 @@
   opacity: 0.74;
   margin-left: 85px;
   display: flex;
+  text-align: left;
   justify-content: left;
 
   &:focus,
@@ -163,28 +162,48 @@
 @media (max-width: $mobile-max-width) {
 
   .callback-modal {
-    padding: 169px 16px;
-    text-align: center;
+    position: relative;
+    padding: 16px 16px 185px 10px;
+    text-align: right;
     width: 100%;
     min-width: 320px;
 
     box-shadow: 0 0 0 0;
     border-radius: 0;
     left: 0;
-    top: 0;
+    top: -577px;
   }
 
   .callback-modal h2 {
     font-size: 24px;
     line-height: 29px;
+    text-align: center;
   }
 
   .callback-modal__close {
-    position: absolute;
-    top: -702px;
-    left: 276px;
-    right: 0;
-    bottom: 0;
+    border: 0;
+    padding: 0;
+    margin-right: 35px;
+    margin-bottom: 138px;
+    cursor: pointer;
+    outline: none;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: $yellow;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 
   .callback-modal p {
@@ -193,6 +212,7 @@
     margin-top: 17px;
     margin-bottom: 32px;
     padding: 0 9px;
+    text-align: center;
   }
 
   .callback-modal__form {

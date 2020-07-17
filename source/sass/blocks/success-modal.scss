@@ -1,0 +1,127 @@
+.success-modal {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+  padding: 26px 50px 112px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  width: 480px;
+  box-shadow: 0 5px 10px 0 $black;
+  border-radius: 8px;
+
+  left: calc(50% - 240px);
+  top: calc(50% - 360px);
+}
+
+.success-modal-hide {
+  display: none;
+}
+
+.success-modal h2 {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+  color: $blue;
+  margin: 0;
+  text-align: center;
+
+  &:before {
+    display: block;
+    margin: 0 auto 31px;
+    content: "";
+    width: 70px;
+    height: 64px;
+    background-image: url("../img/svg/checkmark.svg");
+  }
+}
+
+.success-modal__close {
+  border: 0;
+  padding: 0;
+  margin: 15px 0 80px auto;
+  cursor: pointer;
+  outline: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: $yellow;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.success-modal p {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 26px;
+  opacity: 0.87;
+  margin-top: 17px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.success-modal__ok {
+  background: $button-gradient;
+  border-radius: 80px;
+  border: none;
+  padding: 20px 5px 19px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  font-variant: small-caps;
+  width: 264px;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    background: $button-hover;
+  }
+
+  &:active {
+    background: $button-active;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .success-modal {
+    padding: 16px 16px 185px 14px;
+    width: 100%;
+    min-width: 320px;
+    box-shadow: 0 0 0 0;
+    border-radius: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .success-modal h2 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .success-modal__close {
+    margin: 15px 26px 170px auto;
+  }
+
+  .success-modal p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

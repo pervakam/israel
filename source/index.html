@@ -108,12 +108,12 @@
     </svg>
   </div>
   <div class="callback-modal callback-modal-hide">
-    <h2>Заказать звонок</h2>
     <button class="callback-modal__close" type="button"><span class="visually-hidden">закрыть</span></button>
+    <h2>Заказать звонок</h2>
     <p>Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на
       ваш вопрос!</p>
     <form class="callback-modal__form">
-      <input type="text" name="name-field" id="name-field" value="" placeholder="имя" required>
+      <input type="text" name="name-field" id="name-field" value="" placeholder="имя" required autofocus>
       <label for="name-field" class="visually-hidden">Имя</label>
       <input type="tel" name="tel-field" id="phone-field" value="" placeholder="телефон" required>
       <label for="phone-field" class="visually-hidden">Номер телефона</label>
@@ -122,6 +122,12 @@
       <label for="agree-field">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
     </form>
 
+  </div>
+  <div class="success-modal success-modal-hide">
+    <button class="success-modal__close" type="button"><span class="visually-hidden">закрыть</span></button>
+    <h2>Заявка принята</h2>
+    <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+    <button class="success-modal__ok" type="button">Понятно</button>
   </div>
 </header>
 
