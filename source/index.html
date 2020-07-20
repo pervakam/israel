@@ -120,7 +120,6 @@
       <input type="checkbox" name="agree" id="agree-field" required>
       <label for="agree-field">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
     </form>
-
   </div>
   <div class="success-modal success-modal-hide">
     <button class="success-modal__close" type="button"><span class="visually-hidden">закрыть</span></button>
@@ -162,86 +161,95 @@
       </button>
     </div>
   </section>
-  <!--  <section class="programs">-->
-  <!--    <h1>Программы</h1>-->
-  <!--    <ul>-->
-  <!--      <li>-->
+  <section class="programs">
+    <h1>Программы</h1>
+    <div class="programs__about">
+      <ul class="programs__name">
+        <li class="programs__name-item programs__name-item--general">
+          <a>общие</a>
+        </li>
+        <li class="programs__name-item programs__name-item--academic">
+          <a>академические</a>
+        </li>
+        <li class="programs__name-item programs__name-item--internships">
+          <a>стажировки</a>
+        </li>
+        <li class="programs__name-item programs__name-item--volunteering programs__name-item--active">
+          <a>волонтёрство</a>
+        </li>
+        <li class="programs__name-item programs__name-item--religious">
+          <a>религиозные</a>
+        </li>
+      </ul>
+      <ul class="programs__description">
+        <li>
+          <h2>Академические</h2>
+          <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни
+            — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический
+            центр, живая лаборатория идей и творческого исследования. </p>
+          <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
+            законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это
+            в удивительной университетской среде.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-  <!--        <a>Общие</a>-->
-  <!--      </li>-->
-  <!--      <li>-->
-  <!--        <a>Академические</a>-->
-  <!--      </li>-->
-  <!--      <li>-->
-  <!--        <a>Стажировки</a>-->
-  <!--      </li>-->
-  <!--      <li>-->
-  <!--        <a>Волонтёрство</a>-->
-  <!--      </li>-->
-  <!--      <li>-->
-  <!--        <a>Религиозные</a>-->
-  <!--      </li>-->
-  <!--    </ul>-->
-  <!--    <ul>-->
-  <!--      <li>-->
-  <!--        <h2>Общие</h2>-->
-  <!--      </li>-->
-  <!--      <li>-->
-  <!--        <h2>Академические</h2>-->
-  <!--        <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни —-->
-  <!--          вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический-->
-  <!--          центр, живая лаборатория идей и творческого исследования. </p>-->
-  <!--        <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,-->
-  <!--          законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете-->
-  <!--          изучить все это в удивительной университетской среде.</p>-->
-  <!--      </li>-->
-  <!--      <li>-->
-  <!--        <h2>Стажировки</h2>-->
-  <!--      </li>-->
-  <!--      <li>-->
-  <!--        <h2>Волонтёрство</h2>-->
-  <!--      </li>-->
-  <!--      <li>-->
-  <!--        <h2>Религиозные</h2>-->
-  <!--      </li>-->
-  <!--    </ul>-->
-  <!--  </section>-->
-  <!--  <section class="help">-->
-  <!--    <div class="help__callback">-->
-  <!--      <div>-->
-  <!--        <h1>Хочу поехать!</h1>-->
-  <!--        <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>-->
-  <!--        <form>-->
-  <!--          <input type="tel" name="tel-field" id="tel-field" value="" placeholder="телефон" required>-->
-  <!--          <label for="tel-field" class="visually-hidden">телефон</label>-->
-  <!--          <button type="submit">перезвоните мне</button>-->
-  <!--        </form>-->
-  <!--      </div>-->
-  <!--      <picture>-->
 
-  <!--      </picture>-->
-  <!--    </div>-->
-  <!--    <div class="help__info">-->
-  <!--      <picture>-->
+  <section class="help">
+    <div class="help__callback">
+      <div class="help__callback-form">
+        <h1>хочу поехать!</h1>
+        <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
+        <form class="help__form">
+          <input type="tel" name="tel-field" id="tel-field" value="" placeholder="телефон" required>
+          <label for="tel-field" class="visually-hidden">телефон</label>
+          <button type="submit">перезвоните мне</button>
+        </form>
+      </div>
+      <picture>
+        <!-- 1х: 320px; 2x: 640px -->
+        <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/help/girl-mobile@1x.webp 1x, img/help/girl-mobile@2x.webp 2x">
+        <!-- 1х: 818px; 2x: 1636px -->
+        <source type="image/webp"
+                srcset="img/help/girl-desktop@1x.webp 1x, img/help/girl-desktop@2x.webp 2x">
 
-  <!--      </picture>-->
-  <!--      <div>-->
-  <!--        <h1>Как поехать</h1>-->
-  <!--        <p>Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения-->
-  <!--          о доступных программах и городах, в которых можете пройти программу.</p>-->
-  <!--        <p><em>Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</em></p>-->
-  <!--        <ul>-->
-  <!--          <li>Быть в возрасте от 16 до 30 лет</li>-->
-  <!--          <li>Иметь оконченное среднее образование</li>-->
-  <!--          <li>Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</li>-->
-  <!--          <li>За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>-->
-  <!--        </ul>-->
-  <!--        <p>Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её-->
-  <!--          полную стоимость.</p>-->
+        <!-- 1х: 320px; 2x: 640px -->
+        <source media="(max-width: 767px)"
+                srcset="img/help/girl-mobile@1x.png 1x, img/help/girl-mobile@2x.png 2x">
+        <!-- 1х: 818px; 2x: 1636px -->
+        <img class="help__callback-form-img" src="img/help/girl-desktop@1x.png" srcset="img/help/girl-desktop@2x.png 2x"
+             alt="Девушка с флагом">
+      </picture>
+    </div>
+    <div class="help__info">
+      <picture>
+<!--        <source type="image/webp"-->
+<!--                srcset="img/help/about-moving-pic-desktop@1x.webp 1x, img/help/about-moving-pic-desktop@2x.webp 2x">-->
 
-  <!--      </div>-->
-  <!--    </div>-->
-  <!--  </section>-->
+      <!-- 1х: 581px; 2x: 1162px -->
+        <img class="help__info-img" src="img/help/about-moving-pic-desktop@1x.png" srcset="img/help/about-moving-pic-desktop@2x.png 2x"
+             alt="молодые люди в лучах Солнца">
+      </picture>
+      <div class="help__info-description">
+        <h1>Как поехать</h1>
+        <p class="help__info-text">Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе. Вы получите актуальные сведения
+          о доступных программах и городах, в которых можете пройти программу.</p>
+        <h3>Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</h3>
+        <ol class="help__demands">
+          <li class="help__demands-item help__demands-item--first">Быть в возрасте от 16 до 30 лет</li>
+          <li class="help__demands-item help__demands-item--second">Иметь оконченное среднее образование</li>
+          <li class="help__demands-item help__demands-item--third">Иметь документально подтверждённые еврейские корни и пройти консульскую проверку</li>
+          <li class="help__demands-item help__demands-item--fourth">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
+        </ol>
+        <p class="help__info-ps">Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её
+          полную стоимость.</p>
+      </div>
+    </div>
+  </section>
+
+
   <!--  <section class="about-life">-->
   <!--    <h1>Жизнь в израиле</h1>-->
   <!--    <p>Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и познакомиться с богатой-->

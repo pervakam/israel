@@ -2,11 +2,13 @@ $black:                 #484848;
 $blue:                  #1fc0fc;
 $yellow:                #FFC341;
 $gradient:              linear-gradient(108.42deg, #FFC341 20.46%, #FFD701 65.31%);
+$program-gradient:      linear-gradient(138.15deg, #FFC341 20.46%, #FFD701 65.31%);
 $button-gradient:       linear-gradient(142.39deg, #FFC341 20.46%, #FFD701 65.31%);
 $button-hover:          linear-gradient(143.55deg, #FFC341 50.3%, #FFD701 63.1%);
 $button-active:         radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #FFC341 -50.3%, #FFD701 63.1%);
 
 $mobile-min-width:     320px;
 $mobile-max-width:     767px;
+$tablet-max-width:     1023px;
 
 $retina-dppx:          1.5dppx;

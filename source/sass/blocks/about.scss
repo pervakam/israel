@@ -93,9 +93,13 @@
   .about {
     max-width: 767px;
 
-    padding-bottom: 80px;
+    padding-bottom: 76px;
 
     background-image: url("../img/about/bg-mobile@1x.png");
+
+    background-size: auto 186px;
+    background-position-x: 50%;
+
 
     background-position-y: 200px;
 

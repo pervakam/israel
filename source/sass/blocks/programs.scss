@@ -1,0 +1,381 @@
+.programs {
+  max-width: 1366px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 100px 0 31px;
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+
+  background-image: url("../img/programs/bg-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: 680px 426px;
+  background-position-x: right;
+  background-position-y: 50px;
+
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/programs/bg-desktop@2x.png");
+  }
+}
+
+.programs h1 {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: $blue;
+  margin-top: 0;
+  margin-bottom: 66px;
+  padding-left: 209px;
+}
+
+.programs__about {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-right: 116px;
+}
+
+.programs__name {
+  margin: 0 62px 0 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+.programs__name-item a {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 0.87;
+
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.programs__name-item {
+  margin-bottom: 4px;
+  width: 229px;
+  height: 68px;
+  box-sizing: border-box;
+  padding: 25px 0 0 73px;
+  cursor: pointer;
+  text-transform: capitalize;
+  position: relative;
+
+  &--general a{
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      background-image: url("../img/programs/star-black.png");
+      background-repeat: no-repeat;
+      background-size: 28px 33px;
+      width: 28px;
+      height: 33px;
+      top: 19px;
+      left: 25px;
+    }
+
+    &:hover:before {
+      background-image: url("../img/programs/star-yellow.png");
+    }
+  }
+
+  &--academic a{
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      background-image: url("../img/programs/heat-black.png");
+      background-repeat: no-repeat;
+      background-size: 36px 35px;
+      width: 36px;
+      height: 35px;
+      top: 18px;
+      left: 21px;
+    }
+
+    &:hover:before {
+      background-image: url("../img/programs/heat-yellow.png");
+    }
+  }
+
+  &--internships a{
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      background-image: url("../img/programs/bag-black.png");
+      background-repeat: no-repeat;
+      background-size: 32px 25px;
+      width: 32px;
+      height: 25px;
+      top: 21px;
+      left: 24px;
+    }
+
+    &:hover:before {
+      background-image: url("../img/programs/bag-yellow.png");
+    }
+  }
+
+  &--volunteering a{
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      background-image: url("../img/programs/hand-black.png");
+      background-repeat: no-repeat;
+      background-size: 32px 29px;
+      width: 32px;
+      height: 29px;
+      top: 19px;
+      left: 24px;
+    }
+
+    &:hover:before {
+      background-image: url("../img/programs/hand-yellow.png");
+    }
+  }
+
+  &--religious a{
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      background-image: url("../img/programs/candle-black.png");
+      background-repeat: no-repeat;
+      background-size: 23px 25px;
+      width: 23px;
+      height: 25px;
+      top: 21px;
+      left: 27px;
+    }
+
+    &:hover:before {
+      background-image: url("../img/programs/candle-yellow.png");
+    }
+  }
+
+  &--active {
+    background-image: url("../img/svg/rectangle.svg");
+    background-repeat: no-repeat;
+    background-size: 229px 68px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: none;
+    font-variant: small-caps;
+    color: #ffffff;
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+
+  }
+}
+
+.programs__description {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 560px;
+}
+
+.programs__description h2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.02em;
+  color: $blue;
+
+  margin-top: 17px;
+  margin-bottom: 24px;
+}
+
+.programs__description p {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 26px;
+  opacity: 0.87;
+}
+
+@media (max-width: $mobile-max-width) {
+
+  .programs {
+    max-width: 767px;
+    padding: 0 0 32px;
+
+    background-image: url("../img/programs/bg-mobile@1x.png");
+    background-size: 296px 201px;
+    background-position-y: 120px;
+
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/programs/bg-mobile@2x.png");
+    }
+  }
+
+  .programs h1 {
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 16px;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .programs__about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 767px;
+    margin: 0 auto;
+  }
+
+  .programs__name {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .programs__name-item {
+    margin-bottom: 4px;
+    width: 181px;
+    height: 48px;
+
+    padding: 16px 0 0 52px;
+
+    &--general a{
+      &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        background-image: url("../img/programs/star-black.png");
+        background-repeat: no-repeat;
+        background-size: 28px 33px;
+        width: 28px;
+        height: 33px;
+        top: 19px;
+        left: 25px;
+      }
+
+      &:hover:before {
+        background-image: url("../img/programs/star-yellow.png");
+      }
+    }
+
+    &--academic a{
+      &::before {
+        top: 0;
+        left: 0;
+      }
+
+      &:hover:before {
+        background-image: url("../img/programs/heat-yellow.png");
+      }
+    }
+
+    &--internships a{
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        background-image: url("../img/programs/bag-black.png");
+        background-repeat: no-repeat;
+        background-size: 32px 25px;
+        width: 32px;
+        height: 25px;
+        top: 21px;
+        left: 24px;
+      }
+
+      &:hover:before {
+        background-image: url("../img/programs/bag-yellow.png");
+      }
+    }
+
+    &--volunteering a{
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        background-image: url("../img/programs/hand-black.png");
+        background-repeat: no-repeat;
+        background-size: 32px 29px;
+        width: 32px;
+        height: 29px;
+        top: 19px;
+        left: 24px;
+      }
+
+      &:hover:before {
+        background-image: url("../img/programs/hand-yellow.png");
+      }
+    }
+
+    &--religious a{
+      &::before {
+        display: block;
+        content: "";
+        position: absolute;
+        background-image: url("../img/programs/candle-black.png");
+        background-repeat: no-repeat;
+        background-size: 23px 25px;
+        width: 23px;
+        height: 25px;
+        top: 21px;
+        left: 27px;
+      }
+
+      &:hover:before {
+        background-image: url("../img/programs/candle-yellow.png");
+      }
+    }
+
+    &--active {
+      background-image: url("../img/svg/rectangle.svg");
+      background-repeat: no-repeat;
+      background-size: 229px 68px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: none;
+      font-variant: small-caps;
+      color: #ffffff;
+      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+
+    }
+  }
+
+  .programs__description {
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+
+
+  }
+
+  .programs__description h2 {
+
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+
+    margin-top: 28px;
+    margin-bottom: 17px;
+  }
+
+  .programs__description p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+}
