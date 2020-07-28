@@ -14,16 +14,11 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-
-  //background: url("../img/desktop1366.jpg") no-repeat 50% 0;
-  //opacity: 0.7;
 }
 
 @media (max-width: $mobile-max-width) {
   body {
     min-width: $mobile-min-width;
-
-    //background: url("../img/phone 320.jpg") no-repeat 50% 0;
   }
 }
 

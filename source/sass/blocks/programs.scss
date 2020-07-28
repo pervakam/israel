@@ -66,115 +66,168 @@
   cursor: pointer;
   text-transform: capitalize;
   position: relative;
+}
 
-  &--general a{
-    &:before {
-      display: block;
-      content: "";
-      position: absolute;
-      background-image: url("../img/programs/star-black.png");
-      background-repeat: no-repeat;
-      background-size: 28px 33px;
-      width: 28px;
-      height: 33px;
-      top: 19px;
-      left: 25px;
-    }
-
-    &:hover:before {
-      background-image: url("../img/programs/star-yellow.png");
-    }
-  }
-
-  &--academic a{
-    &::before {
-      display: block;
-      content: "";
-      position: absolute;
-      background-image: url("../img/programs/heat-black.png");
-      background-repeat: no-repeat;
-      background-size: 36px 35px;
-      width: 36px;
-      height: 35px;
-      top: 18px;
-      left: 21px;
-    }
-
-    &:hover:before {
-      background-image: url("../img/programs/heat-yellow.png");
-    }
-  }
-
-  &--internships a{
-    &::before {
-      display: block;
-      content: "";
-      position: absolute;
-      background-image: url("../img/programs/bag-black.png");
-      background-repeat: no-repeat;
-      background-size: 32px 25px;
-      width: 32px;
-      height: 25px;
-      top: 21px;
-      left: 24px;
-    }
-
-    &:hover:before {
-      background-image: url("../img/programs/bag-yellow.png");
-    }
-  }
-
-  &--volunteering a{
-    &::before {
-      display: block;
-      content: "";
-      position: absolute;
-      background-image: url("../img/programs/hand-black.png");
-      background-repeat: no-repeat;
-      background-size: 32px 29px;
-      width: 32px;
-      height: 29px;
-      top: 19px;
-      left: 24px;
-    }
-
-    &:hover:before {
-      background-image: url("../img/programs/hand-yellow.png");
-    }
-  }
-
-  &--religious a{
-    &::before {
-      display: block;
-      content: "";
-      position: absolute;
-      background-image: url("../img/programs/candle-black.png");
-      background-repeat: no-repeat;
-      background-size: 23px 25px;
-      width: 23px;
-      height: 25px;
-      top: 21px;
-      left: 27px;
-    }
-
-    &:hover:before {
-      background-image: url("../img/programs/candle-yellow.png");
-    }
-  }
-
-  &--active {
-    background-image: url("../img/svg/rectangle.svg");
+.programs__item-title--general {
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url("../img/programs/star-black.png");
     background-repeat: no-repeat;
-    background-size: 229px 68px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    text-transform: none;
-    font-variant: small-caps;
-    color: #ffffff;
-    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+    background-size: 28px 33px;
+    width: 28px;
+    height: 33px;
+    top: 19px;
+    left: 25px;
+  }
 
+  &:hover::before {
+    background-image: url("../img/programs/star-yellow.png");
+  }
+}
+
+.programs__item-title--academic {
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url("../img/programs/heat-black.png");
+    background-repeat: no-repeat;
+    background-size: 36px 35px;
+    width: 36px;
+    height: 35px;
+    top: 18px;
+    left: 21px;
+  }
+
+  &:hover::before {
+    background-image: url("../img/programs/heat-yellow.png");
+  }
+}
+
+.programs__item-title--internships {
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url("../img/programs/bag-black.png");
+    background-repeat: no-repeat;
+    background-size: 32px 25px;
+    width: 32px;
+    height: 25px;
+    top: 21px;
+    left: 24px;
+  }
+
+  &:hover::before {
+    background-image: url("../img/programs/bag-yellow.png");
+  }
+}
+
+.programs__item-title--volunteering {
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url("../img/programs/hand-black.png");
+    background-repeat: no-repeat;
+    background-size: 32px 29px;
+    width: 32px;
+    height: 29px;
+    top: 19px;
+    left: 24px;
+  }
+
+  &:hover::before {
+    background-image: url("../img/programs/hand-yellow.png");
+  }
+}
+
+.programs__item-title--religious {
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url("../img/programs/candle-black.png");
+    background-repeat: no-repeat;
+    background-size: 23px 25px;
+    width: 23px;
+    height: 25px;
+    top: 21px;
+    left: 27px;
+  }
+
+  &:hover::before {
+    background-image: url("../img/programs/candle-yellow.png");
+  }
+}
+
+.programs__item-active {
+  background-image: url("../img/svg/rectangle.svg");
+  background-repeat: no-repeat;
+  background-size: 229px 68px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: none;
+  font-variant: small-caps;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+  &:hover a {
+    color: #ffffff;
+  }
+
+  .programs__item-title--general {
+    &::before {
+      background-image: url("../img/programs/star-white.png");
+    }
+
+    &:hover::before {
+      background-image: url("../img/programs/star-white.png");
+    }
+  }
+
+  .programs__item-title--academic {
+    &::before {
+      background-image: url("../img/programs/heat-white.png");
+    }
+
+    &:hover::before {
+      background-image: url("../img/programs/heat-white.png");
+    }
+  }
+
+  .programs__item-title--internships {
+    &::before {
+      background-image: url("../img/programs/bag-white.png");
+    }
+
+    &:hover::before {
+      background-image: url("../img/programs/bag-white.png");
+    }
+  }
+
+  .programs__item-title--volunteering {
+    &::before {
+      background-image: url("../img/programs/hand-white.png");
+    }
+
+    &:hover::before {
+      background-image: url("../img/programs/hand-white.png");
+    }
+  }
+
+  .programs__item-title--religious {
+    &::before {
+      background-image: url("../img/programs/candle-white.png");
+    }
+
+    &:hover::before {
+      background-image: url("../img/programs/candle-white.png");
+    }
   }
 }
 
@@ -186,8 +239,12 @@
   max-width: 560px;
 }
 
+.programs__item-description {
+  display: none;
+}
+
 .programs__description h2 {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
@@ -206,8 +263,11 @@
   opacity: 0.87;
 }
 
-@media (max-width: $mobile-max-width) {
+.programs__item-description--active {
+  display: block;
+}
 
+@media (max-width: $mobile-max-width) {
   .programs {
     max-width: 767px;
     padding: 0 0 32px;
@@ -242,133 +302,79 @@
     margin: 0;
     padding: 0;
     display: flex;
+    width: 800px;
   }
 
   .programs__name-item {
     margin-bottom: 4px;
     width: 181px;
     height: 48px;
-
     padding: 16px 0 0 52px;
+  }
 
-    &--general a{
-      &:before {
-        display: block;
-        content: "";
-        position: absolute;
-        background-image: url("../img/programs/star-black.png");
-        background-repeat: no-repeat;
-        background-size: 28px 33px;
-        width: 28px;
-        height: 33px;
-        top: 19px;
-        left: 25px;
-      }
-
-      &:hover:before {
-        background-image: url("../img/programs/star-yellow.png");
-      }
+  .programs__item-title--general {
+    &::before {
+      top: 5px;
+      left: 10px;
     }
+  }
 
-    &--academic a{
+  .programs__item-title--academic {
+    &::before {
+      top: 5px;
+      left: 10px;
+    }
+  }
+
+  .programs__item-title--internships {
+    &::before {
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  .programs__item-title--volunteering {
+    &::before {
+      top: 5px;
+      left: 10px;
+    }
+  }
+
+  .programs__item-title--religious {
+    &::before {
+      top: 10px;
+      left: 10px;
+    }
+  }
+
+  .programs__item-active {
+    box-sizing: border-box;
+    width: 181px;
+    height: 48px;
+    padding: 15px 12px 14px 52px;
+    background-color: $program-gradient;
+    border-radius: 60.6704px;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: left;
+
+    .programs__item-title--general {
       &::before {
-        top: 0;
-        left: 0;
+        top: 6px;
+        left: 10px;
       }
-
-      &:hover:before {
-        background-image: url("../img/programs/heat-yellow.png");
-      }
-    }
-
-    &--internships a{
-      &::before {
-        display: block;
-        content: "";
-        position: absolute;
-        background-image: url("../img/programs/bag-black.png");
-        background-repeat: no-repeat;
-        background-size: 32px 25px;
-        width: 32px;
-        height: 25px;
-        top: 21px;
-        left: 24px;
-      }
-
-      &:hover:before {
-        background-image: url("../img/programs/bag-yellow.png");
-      }
-    }
-
-    &--volunteering a{
-      &::before {
-        display: block;
-        content: "";
-        position: absolute;
-        background-image: url("../img/programs/hand-black.png");
-        background-repeat: no-repeat;
-        background-size: 32px 29px;
-        width: 32px;
-        height: 29px;
-        top: 19px;
-        left: 24px;
-      }
-
-      &:hover:before {
-        background-image: url("../img/programs/hand-yellow.png");
-      }
-    }
-
-    &--religious a{
-      &::before {
-        display: block;
-        content: "";
-        position: absolute;
-        background-image: url("../img/programs/candle-black.png");
-        background-repeat: no-repeat;
-        background-size: 23px 25px;
-        width: 23px;
-        height: 25px;
-        top: 21px;
-        left: 27px;
-      }
-
-      &:hover:before {
-        background-image: url("../img/programs/candle-yellow.png");
-      }
-    }
-
-    &--active {
-      background-image: url("../img/svg/rectangle.svg");
-      background-repeat: no-repeat;
-      background-size: 229px 68px;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 19px;
-      text-transform: none;
-      font-variant: small-caps;
-      color: #ffffff;
-      text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
-
     }
   }
 
   .programs__description {
     padding: 0 16px;
-
     box-sizing: border-box;
-
-
-
   }
 
   .programs__description h2 {
-
     font-size: 24px;
     line-height: 29px;
     letter-spacing: -0.02em;
-
     margin-top: 28px;
     margin-bottom: 17px;
   }
@@ -377,5 +383,4 @@
     font-size: 14px;
     line-height: 22px;
   }
-
 }

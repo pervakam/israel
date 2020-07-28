@@ -14,7 +14,6 @@
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/about/bg-desktop@2x.png");
   }
-
 }
 
 .about__description {
@@ -68,7 +67,7 @@
   &:focus,
   &:hover {
     .about__video-icon {
-      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     }
   }
 
@@ -86,27 +85,20 @@
   height: 66px;
   border-radius: 50%;
   fill: #ffffff;
-
 }
 
 @media (max-width: $mobile-max-width) {
   .about {
     max-width: 767px;
-
     padding-bottom: 76px;
-
     background-image: url("../img/about/bg-mobile@1x.png");
-
     background-size: auto 186px;
     background-position-x: 50%;
-
-
     background-position-y: 200px;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/about/bg-mobile@2x.png");
     }
-
   }
 
   .about__description {
@@ -129,7 +121,6 @@
     text-align: left;
     margin-bottom: 48px;
     padding: 0 16px;
-
   }
 
   .about__video {
@@ -146,7 +137,7 @@
     &:focus,
     &:hover {
       .about__video-icon {
-        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
       }
     }
 

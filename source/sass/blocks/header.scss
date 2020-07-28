@@ -69,12 +69,11 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
-  color: #FFFFFF;
-  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   width: 343px;
   margin: -370px auto 0;
   text-align: center;
-
 }
 
 .page-header__intro svg {
@@ -89,10 +88,12 @@
 
   &:hover rect {
     animation: bounce 1s infinite linear;
+
     @keyframes bounce {
       0% {
         transform: translateY(0%);
       }
+
       100% {
         transform: translateY(10%);
       }
@@ -101,7 +102,6 @@
 }
 
 @media (max-width: $mobile-max-width) {
-
   .page-header__wrapper {
     max-width: 767px;
     padding: 20px 0 0 15px;
@@ -163,5 +163,3 @@
     }
   }
 }
-
-

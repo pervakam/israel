@@ -1,0 +1,167 @@
+.photo {
+  max-width: 1366px;
+  box-sizing: border-box;
+  margin: 75px auto 0;
+  padding: 120px 167px 196px 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+
+  background-image: url("../img/photo/bg-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/photo/bg-desktop@2x.png");
+  }
+}
+
+.photo__description {
+  width: 403px;
+  text-align: left;
+}
+
+.photo__description h1 {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: $blue;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.photo__description p {
+  font-size: 17px;
+  line-height: 29px;
+  color: #ffffff;
+  opacity: 0.87;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  margin-top: 0;
+  margin-left: 2px;
+  margin-bottom: 48px;
+}
+
+.photo__description a {
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 19px 40px 17px;
+  width: 230px;
+  background-image: linear-gradient(142.39deg, #ffc341 20.46%, #ffd701 65.31%);
+  border-radius: 80px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  font-variant: small-caps;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  display: flex;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/svg/instagram.svg");
+    margin-right: 8px;
+  }
+
+  &:focus,
+  &:hover {
+    background: $button-hover;
+  }
+
+  &:active {
+    background: $button-active;
+  }
+}
+
+@media (max-width: $tablet-max-width) {
+  .photo {
+    width: 100%;
+    max-width: 1023px;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px 11px;
+    display: block;
+
+    background-image: url("../img/photo/bg-tablet@1x.png");
+    background-repeat: no-repeat;
+
+    background-size: auto 587px;
+    background-position-x: 23%;
+    background-position-y: -230px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/photo/bg-tablet@2x.png");
+    }
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .photo {
+    width: 100%;
+    max-width: 767px;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px 11px;
+    display: block;
+
+    background-image: url("../img/photo/bg-mobile@1x.png");
+    background-repeat: no-repeat;
+
+    background-size: 100% auto;
+    background-position-x: 23%;
+    background-position-y: 65px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/photo/bg-mobile@2x.png");
+    }
+  }
+
+  .photo__description {
+    width: 100%;
+    max-width: 403px;
+    margin: 0 auto;
+  }
+
+  .photo__description h1 {
+    margin-bottom: 95px;
+  }
+
+  .photo__description p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-left: 12px;
+    margin-bottom: 58px;
+  }
+
+  .photo__description a {
+    padding: 19px 57px 17px;
+    width: 264px;
+    margin: 0 auto;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/svg/instagram.svg");
+      margin-right: 8px;
+    }
+
+    &:focus,
+    &:hover {
+      background: $button-hover;
+    }
+
+    &:active {
+      background: $button-active;
+    }
+  }
+}

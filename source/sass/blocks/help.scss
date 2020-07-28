@@ -10,7 +10,6 @@
   display: flex;
   justify-content: flex-end;
 
-
   background-image: url("../img/help/bg-desktop@1x.png");
   background-repeat: no-repeat;
   background-size: 147px 262px;
@@ -66,7 +65,7 @@
 }
 
 .help__form input {
-  border: 2px solid #E3E3E3;
+  border: 2px solid #e3e3e3;
   outline: none;
   cursor: pointer;
   border-radius: 80px;
@@ -117,6 +116,7 @@
   display: flex;
   justify-content: flex-start;
   padding-top: 160px;
+  padding-bottom: 300px;
 
   background-image: url("../img/help/about-moving-bg-desktop@1x.png");
   background-repeat: no-repeat;
@@ -139,7 +139,6 @@
   width: 100%;
   max-width: 581px;
   height: auto;
-
 }
 
 .help__info-description {
@@ -148,7 +147,7 @@
   text-align: left;
   position: relative;
 
-  &:after {
+  &::after {
     position: absolute;
     display: block;
     content: "";
@@ -172,10 +171,22 @@
   margin-left: -16px;
   margin-bottom: 0;
   padding-left: 60px;
-
   font-size: 15px;
   line-height: 21px;
   opacity: 0.87;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 1px;
+    height: 193px;
+    top: 28px;
+    left: 17px;
+    border-left: 1px dashed $black;
+    opacity: 0.2;
+  }
 }
 
 .help__demands-item {
@@ -191,10 +202,8 @@
 
   &--third {
     margin-bottom: 40px;
-  }
 
-  &--third {
-    &:before {
+    &::before {
       margin-top: 10px;
     }
   }
@@ -202,12 +211,12 @@
   &--fourth {
     max-width: 420px;
 
-    &:before {
+    &::before {
       margin-top: 5px;
     }
   }
 
-  &:before {
+  &::before {
     position: absolute;
     counter-increment: customCounter;
     content: counter(customCounter);
@@ -217,7 +226,7 @@
     color: $yellow;
     background-color: #ffffff;
     background-size: 36px 36px;
-    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
     display: inline-block;
     text-align: center;
     width: 36px;
@@ -226,9 +235,6 @@
 
     top: -8px;
     left: -61px;
-    //margin-left: 0;
-    //margin-right: 24px;
-
   }
 }
 
@@ -282,9 +288,7 @@
   }
 }
 
-
 @media (max-width: $mobile-max-width) {
-
   .help__callback {
     padding-top: 34px;
     display: flex;
@@ -337,7 +341,6 @@
     padding: 20px 5px 19px;
     width: 264px;
     margin: 7px auto 0;
-
   }
 
   .help__info {
@@ -358,7 +361,7 @@
     max-width: 552px;
     text-align: left;
 
-    &:after {
+    &::after {
       width: 216px;
       height: 199px;
       background-image: url("../img/help/stamp-mobile@1x.png");
@@ -380,6 +383,12 @@
 
     font-size: 14px;
     line-height: 22px;
+
+    &::before {
+      height: 241px;
+      top: 28px;
+      left: 26px;
+    }
   }
 
   .help__demands-item {
@@ -387,7 +396,8 @@
 
     &--second {
       margin-bottom: 37px;
-      &:before {
+
+      &::before {
         margin-top: 10px;
       }
     }
@@ -395,19 +405,19 @@
     &--third {
       margin-bottom: 26px;
 
-      &:before {
+      &::before {
         margin-top: 22px;
       }
     }
 
     &--fourth {
-      &:before {
+      &::before {
         margin-top: 23px;
       }
     }
 
-    &:before {
-     left: -52px;
+    &::before {
+      left: -52px;
     }
   }
 
@@ -416,7 +426,6 @@
     line-height: 39px;
     text-align: center;
     margin-top: 55px;
-
   }
 
   .help__info-text {

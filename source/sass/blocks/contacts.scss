@@ -1,0 +1,361 @@
+.contacts {
+  max-width: 1366px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-left: 8%;
+  padding-bottom: 60px;
+
+
+  background-image: url("../img/contacts/bg-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position-y: -53px;
+  background-position-x: 0;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/contacts/bg-desktop@2x.png");
+  }
+}
+
+.contacts__info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contacts__about {
+  width: 100%;
+  max-width: 515px;
+  margin-right: 39px;
+  padding-top: 37px;
+}
+
+.contacts__about h1 {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: $blue;
+  margin: 0 auto;
+}
+
+.contacts__location {
+  margin-top: 48px;
+  margin-left: 5px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  opacity: 0.74;
+  display: flex;
+  justify-content: flex-start;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 18px;
+    background-image: url("../img/contacts/marker.png");
+    margin-top: 2px;
+    margin-right: 6px;
+  }
+
+  &::after {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 15px;
+    margin-top: 5px;
+    background-image: url("../img/contacts/gps.png");
+  }
+
+  & p {
+    margin: 0;
+  }
+
+  & span {
+    font-variant: small-caps;
+    border-bottom: 1px dashed $blue;
+    padding-bottom: 2px;
+    margin-left: 16px;
+    margin-right: 8px;
+  }
+}
+
+.contacts__curator {
+  display: flex;
+  margin-top: 39px;
+}
+
+.contacts__curator-img {
+  width: 112px;
+  height: 112px;
+}
+
+.contacts__curator-info {
+  text-align: left;
+  margin-left: 25px;
+}
+
+.contacts__curator-name {
+  font-size: 15px;
+  line-height: 22px;
+  opacity: 0.74;
+
+  margin: 2px 0 0;
+}
+
+.contacts__curator-name span {
+  color: $blue;
+  opacity: 1;
+  margin-right: 8px;
+}
+
+.contacts__curator-adress {
+  font-size: 13px;
+  line-height: 19px;
+  opacity: 0.74;
+  margin-top: 12px;
+}
+
+.contacts__curator-networks {
+  margin-top: 9px;
+  margin-left: -5px;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+
+  list-style: none;
+}
+
+.contacts__curator-networks-item {
+  margin-right: 12px;
+
+  &:hover {
+    .icon-fill {
+      fill: $yellow;
+    }
+  }
+}
+
+.icon-fill {
+  fill: rgba(72, 72, 72, 0.2);
+}
+
+.contacts__curator-facebook {
+  width: 24px;
+  height: 24px;
+}
+
+.contacts__curator-telegram {
+  width: 24px;
+  height: 24px;
+}
+
+.contacts__curator-whatsapp {
+  width: 24px;
+  height: 24px;
+}
+
+.contacts__location-description {
+  margin-top: 12px;
+  font-size: 17px;
+  line-height: 29px;
+  opacity: 0.87;
+  text-align: left;
+}
+
+.contacts__map {
+  margin-top: 41px;
+}
+
+.contacts__map-img {
+  width: 100%;
+  max-width: 702px;
+  height: auto;
+  max-height: 448px;
+}
+
+.contacts__callback {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 48px;
+}
+
+.contacts__callback-description {
+  width: 364px;
+  text-align: left;
+  margin-right: 14px;
+}
+
+.contacts__callback-description h3 {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+  opacity: 0.87;
+  margin-bottom: 0;
+}
+
+.contacts__callback-description p {
+  font-size: 13px;
+  line-height: 19px;
+  opacity: 0.5;
+}
+
+.contacts__callback-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.contacts__callback-form input {
+  border: 2px solid #e3e3e3;
+  outline: none;
+  cursor: pointer;
+  border-radius: 80px;
+  box-sizing: border-box;
+  padding: 19px 0 20px 40px;
+  margin-bottom: 8px;
+  margin-right: 24px;
+  width: 250px;
+  height: 59px;
+
+  &:focus {
+    border: 2px solid $yellow;
+  }
+}
+
+.contacts__callback-form button {
+  background: $button-gradient;
+  border-radius: 80px;
+  border: none;
+  padding: 20px 5px 19px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: center;
+  font-variant: small-caps;
+  width: 216px;
+  height: 59px;
+  margin: 3px 0 4px;
+  cursor: pointer;
+  outline: none;
+
+  &:focus,
+  &:hover {
+    background: $button-hover;
+  }
+
+  &:active {
+    background: $button-active;
+  }
+}
+
+
+@media (max-width: $mobile-max-width) {
+  .contacts {
+    max-width: 767px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 0;
+    background-image: none;
+    padding-bottom: 65px;
+  }
+
+  .contacts__info {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .contacts__about {
+    width: 100%;
+    max-width: 767px;
+
+    margin: 0 auto;
+    padding-top: 18px;
+  }
+
+  .contacts__about h1 {
+    font-size: 32px;
+    line-height: 39px;
+    margin: 0 auto;
+  }
+
+  .contacts__location {
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+
+  .contacts__curator {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 39px;
+    padding: 0 16px;
+  }
+
+  .contacts__curator-info {
+    margin-left: 0;
+  }
+
+  .contacts__curator-name {
+    font-size: 15px;
+    line-height: 22px;
+    opacity: 0.74;
+
+    margin: 13px 0 0;
+  }
+
+  .contacts__location-description {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0 16px;
+  }
+
+  .contacts__map {
+    margin-top: 39px;
+  }
+
+  .contacts__map-img {
+    width: 320px;
+    height: 420px;
+  }
+
+  .contacts__callback {
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: 5px;
+    padding: 0 16px;
+  }
+
+  .contacts__callback-description {
+    width: 288px;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  .contacts__callback-description h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .contacts__callback-form {
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px auto 0;
+    flex-wrap: nowrap;
+  }
+
+  .contacts__callback-form input {
+    width: 288px;
+    margin-right: 0;
+  }
+
+  .contacts__callback-form button {
+    width: 264px;
+    margin: 15px auto 0;
+  }
+}

@@ -68,7 +68,7 @@
 }
 
 .callback-modal__form input {
-  border: 2px solid #E3E3E3;
+  border: 2px solid #e3e3e3;
   outline: none;
   cursor: pointer;
   border-radius: 80px;
@@ -146,21 +146,20 @@
   opacity: 0;
 
   &:checked + label::after {
-      display: block;
-      content: "";
-      position: absolute;
-      left: -19px;
-      top: 2px;
-      width: 4px;
-      height: 8px;
-      border: solid $yellow;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
+    display: block;
+    content: "";
+    position: absolute;
+    left: -19px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid $yellow;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
   }
 }
 
 @media (max-width: $mobile-max-width) {
-
   .callback-modal {
     position: relative;
     padding: 16px 16px 185px 10px;
