@@ -1,8 +1,5 @@
 'use strict';
 
-var piska = $('.success-modal');
-console.log(piska)
-
 (function () {
   var callbackForm = document.querySelector('.callback-modal__form');
   var callbackFormNameField = callbackForm.querySelector('input[name="name-field"]');
@@ -41,13 +38,9 @@ console.log(piska)
 
   helpForm.addEventListener('submit', showSuccessModalForHelp);
 
-
   contactsCallbackForm.addEventListener('submit', showSuccessModalForContacts);
 
-
 ////// валидация ввода номера телефона ///////////
-
-
   var telCallbackModalField = document.getElementById('tel-field');
   var telHelpField = document.getElementById('phone-field');
   var telContactsField = document.getElementById('phone');
@@ -61,9 +54,9 @@ console.log(piska)
     }
   };
 
-  if (telHelpField) {
-    telCheck(telHelpField)
-  }
+  // if (telHelpField) {
+  //   telCheck(telHelpField)
+  // }
 
   if (telCallbackModalField) {
     telCheck(telCallbackModalField)
@@ -72,4 +65,12 @@ console.log(piska)
   if (telContactsField) {
     telCheck(telContactsField)
   }
+})();
+
+(function () {
+  $('#tel-field').mask('+7 000-000-00-00',
+    {placeholder: "телефон",
+      selectOnFocus: true
+    });
+
 })();

@@ -252,9 +252,12 @@
   }
 
   .about-life__list {
+    display: flex;
     width: 100%;
     height: auto;
     align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   .about-life__item p {
@@ -265,7 +268,7 @@
   }
 
   .about-life__item {
-    display: none;
+    //display: none;
 
     width: 288px;
     max-height: 400px;
