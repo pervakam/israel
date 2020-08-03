@@ -1,8 +1,14 @@
 'use strict';
 
+
+
 (function () {
   var ESC_KEY = 'Escape';
+  var BACKSPACE_KEY = 'Backspace';
+  var DELETE_KEY = 'Delete';
+  // var TEL_PATTERN = /^((8|\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}$/;
 
+  var body = document.querySelector('body');
   var callbackModalHide = document.querySelector('.callback-modal-hide');
   var callbackModal = document.querySelector('.callback-modal');
   var callbackCloseButton = document.querySelector('.callback-modal__close');
@@ -24,26 +30,34 @@
 
   var closeCallbackModal = function () {
     callbackModal.classList.add('callback-modal-hide');
+    body.classList.remove('no-scroll');
+
+    callbackCloseButton.removeEventListener('click', closeCallbackModal);
+    window.removeEventListener('keydown', escCallbackModalHandler);
+    document.removeEventListener('click', overlayCallbackModalHandler);
+  };
+
+  var escCallbackModalHandler = function (evt) {
+    if (evt.key === ESC_KEY) {
+      evt.preventDefault();
+      closeCallbackModal();
+    }
+  };
+
+  var overlayCallbackModalHandler = function (evt) {
+    if (evt.target !== callbackOpenButton && evt.target !== callbackModal && !callbackModal.contains(evt.target)) {
+      closeCallbackModal();
+    }
   };
 
   var closeCallbackModalByClick = function () {
     callbackCloseButton.addEventListener('click', closeCallbackModal);
-
-    window.addEventListener('keydown', function (evt) {
-      if (evt.key === ESC_KEY) {
-        evt.preventDefault();
-        closeCallbackModal();
-      }
-    });
-
-    document.addEventListener('click', function (evt) {
-      if (evt.target !== callbackOpenButton && evt.target !== callbackModal && !callbackModal.contains(evt.target)) {
-        closeCallbackModal()
-      }
-    });
+    window.addEventListener('keydown', escCallbackModalHandler);
+    document.addEventListener('click', overlayCallbackModalHandler);
   };
 
   var openCallbackModal = function () {
+    body.classList.add('no-scroll');
     callbackModal.classList.remove('callback-modal-hide');
     callbackFormNameField.focus();
 
@@ -54,9 +68,42 @@
     callbackOpenButton.addEventListener('click', openCallbackModal);
   }
 
+  var closeSuccessModal = function () {
+    successModal.classList.add('success-modal-hide');
+    body.classList.remove('no-scroll');
+
+    successCloseButton.removeEventListener('click', closeSuccessModal);
+    successOkButton.removeEventListener('click', closeSuccessModal);
+    window.removeEventListener('keydown', escSuccessModalHandler);
+    document.removeEventListener('click', overlaySuccessModalHandler);
+  };
+
+  var escSuccessModalHandler = function (evt) {
+    if (evt.key === ESC_KEY) {
+      evt.preventDefault();
+      closeSuccessModal();
+    }
+  };
+
+  var overlaySuccessModalHandler = function (evt) {
+    if (evt.target !== callbackOpenButton && evt.target !== successModal && !successModal.contains(evt.target)) {
+      closeSuccessModal()
+    }
+  };
+
+  var closeSuccessModalByClick = function () {
+    successCloseButton.addEventListener('click', closeSuccessModal);
+    successOkButton.addEventListener('click', closeSuccessModal);
+    window.addEventListener('keydown', escSuccessModalHandler);
+    document.addEventListener('click', overlaySuccessModalHandler);
+  };
+
   var showSuccessModal = function (evt) {
     evt.preventDefault();
-    successModal.classList.remove('success-modal-hide')
+    successModal.classList.remove('success-modal-hide');
+    body.classList.add('no-scroll');
+
+    closeSuccessModalByClick();
   };
 
   var showSuccessModalForCallback = function (evt) {
@@ -80,30 +127,6 @@
     localStorage.setItem('contactsFormTel', contactsFormTelField.value);
   };
 
-  var closeSuccessModal = function () {
-    successModal.classList.add('success-modal-hide');
-  };
-
-  var closeSuccessModalByClick = function () {
-    successCloseButton.addEventListener('click', closeSuccessModal);
-    successOkButton.addEventListener('click', closeSuccessModal);
-
-    window.addEventListener('keydown', function (evt) {
-      if (evt.key === ESC_KEY) {
-        evt.preventDefault();
-        closeSuccessModal();
-      }
-    });
-
-    document.addEventListener('click', function (evt) {
-      if (evt.target !== callbackOpenButton && evt.target !== successModal && !successModal.contains(evt.target)) {
-        closeSuccessModal()
-      }
-    });
-  };
-
-  closeSuccessModalByClick();
-
 ////// отправка формы обратного звонка ///////////
   callbackForm.addEventListener('submit', showSuccessModalForCallback);
 
@@ -118,10 +141,12 @@
   var telHelpField = document.getElementById('phone-field');
   var telContactsField = document.getElementById('phone');
 
-
   var telCheck = function (number) {
     number.onkeydown = function (evt) {
-      return !(/^[А-Яа-яA-Za-z ]$/.test(evt.key));
+      if (evt.key === BACKSPACE_KEY || evt.key === DELETE_KEY) {
+      } else {
+        return (/^[0-9+()]$/.test(evt.key));
+      }
     }
   };
 
@@ -159,17 +184,32 @@
 
 
 ////// переключение ответов ///////////
-  var answerOpenButton = document.querySelectorAll('.faq__item-title--hide');
+  var answerOpenButton = document.querySelectorAll('.faq__item-question--hide');
+  var answerHide = document.querySelector('.faq__item-answer--hide');
   var answerText = document.querySelectorAll('.faq__item-answer');
+  var activeAnswerText = document.querySelectorAll('.faq__item-answer--active');
 
-  var showAnswer = function (arr, i, activeClass) {
+
+  if (!answerHide) {
+    answerText.forEach(function (it) {
+      it.classList.add('faq__item-answer--hide');
+    });
+  }
+
+  var showAnswer = function (arr, i, activeClass,) {
+    // arr.forEach(function (item) {
+    //   item.classList.remove(activeClass);
+    // });
+
     arr[i].classList.toggle(activeClass);
+
   };
 
   answerOpenButton.forEach(function (button, i) {
     button.addEventListener('click', function () {
-      showAnswer(answerOpenButton, i, 'faq__item-title--active');
-      showAnswer(answerText, i, 'visually-hidden');
+
+      showAnswer(answerOpenButton, i, 'faq__item-question--active');
+      showAnswer(answerText, i, 'faq__item-answer--active');
     });
   });
 

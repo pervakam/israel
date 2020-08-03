@@ -32,7 +32,7 @@
 }
 
 .help__callback-form h1 {
-  font-family: "Montserrat";
+  font-family: $montserrat;
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;
@@ -83,6 +83,10 @@
 
   &:focus {
     border: 2px solid $yellow;
+  }
+
+  &:hover {
+    border: 2px solid $light-black;
   }
 }
 
@@ -239,7 +243,7 @@
 }
 
 .help__info-description h1 {
-  font-family: "Montserrat";
+  font-family: $montserrat;
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;

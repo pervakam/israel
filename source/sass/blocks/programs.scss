@@ -21,7 +21,7 @@
 }
 
 .programs h1 {
-  font-family: "Montserrat";
+  font-family: $montserrat;
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;
@@ -37,7 +37,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding-right: 116px;
+  padding-right: 96px;
 }
 
 .programs__name {
@@ -51,6 +51,8 @@
   font-size: 15px;
   line-height: 18px;
   opacity: 0.87;
+  text-decoration: none;
+  color: $black;
 
   &:hover {
     color: $yellow;
@@ -176,6 +178,10 @@
   color: #ffffff;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 
+  & a {
+    color: #ffffff;
+  }
+
   &:hover a {
     color: #ffffff;
   }
@@ -244,7 +250,7 @@
 }
 
 .programs__description h2 {
-  font-family: "Montserrat";
+  font-family: $montserrat;
   font-style: normal;
   font-weight: bold;
   font-size: 28px;

@@ -35,10 +35,30 @@
   text-align: left;
   position: relative;
   padding-left: 20px;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 153px;
+    height: 177px;
+    top: 725px;
+    left: -90px;
+
+    background-image: url("../img/faq/bag-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position-y: 0;
+    background-position-x: 0;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/faq/bag-desktop@2x.png");
+    }
+  }
 }
 
 .faq__section h1 {
-  font-family: "Montserrat";
+  font-family: $montserrat;
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;
@@ -57,26 +77,6 @@
   font-size: 15px;
   line-height: 21px;
   position: relative;
-
-  &::after {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 153px;
-    height: 177px;
-    bottom: -130px;
-    left: -110px;
-
-    background-image: url("../img/faq/bag-desktop@1x.png");
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position-y: 0;
-    background-position-x: 0;
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/faq/bag-desktop@2x.png");
-    }
-  }
 }
 
 .faq__list-item {
@@ -116,7 +116,7 @@
   }
 }
 
-.faq__item-title {
+.faq__item-question {
   position: relative;
   cursor: pointer;
   margin-top: 0;
@@ -163,7 +163,7 @@
   }
 }
 
-.faq__item p {
+.faq__item-answer {
   width: 100%;
   max-width: 480px;
   font-weight: normal;
@@ -172,6 +172,14 @@
   opacity: 0.74;
   margin-top: 25px;
   margin-bottom: 16px;
+
+  &--hide {
+    display: none;
+  }
+
+  &--active {
+    display: block;
+  }
 }
 
 
@@ -194,6 +202,22 @@
     text-align: left;
     position: relative;
     padding-left: 0;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 146px;
+      height: 177px;
+      top: 660px;
+      left: -15px;
+
+      background-image: url("../img/faq/bag-mobile@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/faq/bag-mobile@2x.png");
+      }
+    }
   }
 
   .faq__section h1 {
@@ -205,22 +229,6 @@
 
   .faq__list {
     margin-top: 37px;
-
-    &::after {
-      display: block;
-      content: "";
-      position: absolute;
-      width: 146px;
-      height: 177px;
-      bottom: 60px;
-      left: -15px;
-
-      background-image: url("../img/faq/bag-mobile@1x.png");
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/faq/bag-mobile@2x.png");
-      }
-    }
   }
 
   .faq__list-item {
@@ -266,7 +274,7 @@
     }
   }
 
-  .faq__item-title {
+  .faq__item-question {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: normal;
@@ -311,7 +319,7 @@
     }
   }
 
-  .faq__item p {
+  .faq__item-answer {
     font-size: 14px;
     line-height: 22px;
     min-width: 288px;

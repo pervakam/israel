@@ -1,0 +1,46 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 768px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  font-family: $firaSans;
+  font-style: normal;
+  color: $black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  //background: url("../img/desktop1366.jpg") no-repeat 50% 0;
+  //opacity: 0.6;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+@media (max-width: $mobile-max-width) {
+  body {
+    min-width: $mobile-min-width;
+
+    //background: url("../img/phone320.jpg") no-repeat 50% 0;
+    //opacity: 0.6;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(100%);
+}

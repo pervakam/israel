@@ -1,4 +1,6 @@
 .about {
+  position: relative;
+  z-index: 10;
   max-width: 1366px;
   box-sizing: border-box;
   display: flex;
@@ -23,7 +25,7 @@
 }
 
 .about__description h1 {
-  font-family: "Montserrat";
+  font-family: $montserrat;
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;
@@ -51,7 +53,7 @@
   margin: 0 auto;
 }
 
-.about__video button {
+.about__play-button {
   background: rgba(255, 255, 255, 0.32);
   position: absolute;
   border-radius: 48px;
@@ -127,7 +129,7 @@
     max-width: 320px;
   }
 
-  .about__video button {
+  .about__play-button {
     border-radius: 40px;
     width: 80px;
     height: 80px;

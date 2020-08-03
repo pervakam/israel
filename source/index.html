@@ -63,26 +63,29 @@
     <a class="page-header__logo">
       <span class="visually-hidden">Masa - путешествие в Израиль</span>
       <picture>
+        <!-- 1х: 120px; 2x: 240px -->
         <source media="(max-width: 767px)" srcset="img/header/logo-header-desktop@1x.png 1x, img/header/logo-header-desktop@2x.png 2x">
-        <img class="page-header__logo-img" src="img/header/logo-header-desktop@1x.png" srcset="img/header/logo-header-desktop@2x.png 2x" alt="Маса-путешествие в Израиль">
+
+        <!-- 1х: 137px; 2x: 274px -->
+        <img class="page-header__logo-img" src="img/header/logo-header-desktop@1x.png" srcset="img/header/logo-header-desktop@2x.png 2x" alt="Логотип проекта Маса">
       </picture>
     </a>
     <div class="page-header__contact">
-      <a href="tel:+(972)2–621–6581">+ (972) 2 – 621 – 6581</a>
+      <a href="tel:+97226216581">+ (972) 2 – 621 – 6581</a>
       <a class="page-header__contact-callback">заказать звонок</a>
     </div>
   </div>
   <div class="page-header__intro">
     <h1 class="visually-hidden">Израиль</h1>
     <picture>
-      <!-- 1х: 290px; 2x: 280px -->
-      <source media="(max-width: 767px)"
-              srcset="img/header/background-mobile@1x.jpg 1x, img/header/background-mobile@2x.jpg 2x">
-      <!-- 1х: 560px; 2x: 1120px -->
+      <!-- 1х: 912px; 2x: 1824px -->
+      <source media="(max-width: 767px)" srcset="img/header/background-mobile@1x.jpg 1x, img/header/background-mobile@2x.jpg 2x">
+
+      <!-- 1х: 1367px; 2x: 2734px -->
       <img class="page-header__intro-pic" src="img/header/background-desktop@1x.jpg" srcset="img/header/background-desktop@2x.jpg 2x" alt="Учёба, путешествие и карьера для еврейской молодёжи">
     </picture>
     <p>Учёба, путешествие и карьера для еврейской молодёжи</p>
-    <svg width="76" height="132" viewBox="0 0 76 132" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg class="page-header__pointer" width="76" height="132" viewBox="0 0 76 132" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <path d="M38 76V131.5" stroke="white"/>
       <rect x="29" y="25" width="17" height="26" fill="url(#pattern0)"/>
       <circle cx="38" cy="38" r="26.5" stroke="white"/>
@@ -91,7 +94,7 @@
         <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
           <use xlink:href="#image0" transform="scale(0.0588235 0.0384615)"/>
         </pattern>
-        <image id="image0" width="17" height="26" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAaCAYAAABRqrc5AAABzklEQVQ4jd2VO2hUQRSGv70bg0QNwoIoBEQDQdLEQiEpbEWIhZBCCystFFuxSKNgI1gK1mIjWBgUgphCfFWCjURiBLVTgyTE1Rif2c9iZ8nJbLKulvnhcM/zZ+bOnf+WVDL0AEeAYaAP6AYWgDfABDCW/GWo0Y6rL2yNt+rpOBcJzqm/QvOsOqFeV++qMxnZpZzkmPozFRfVy+rObJXb1QtqNRCdaZBsU6dSckE9lQ3ndlSdT/3v1F7Uk4H5ajbQp55V92b5i2FmFPVmCr6o/aGxrN5KtQdqV7a1xjt6WAC96aBeA9Ph4DYCleR3J2tgBnie/F0FsCkFc0Atnn6Ia1kNYDY9u4qQLLKmElAOtdXqAOaFiB/AfPK/Ap/XauxoQfIbGAWeAI+Axf8hAXiZrCVabadtrEOSJlVqEyu+k08p2AF0/gNJT3pWC2AyBbuBwTYJ9gADyZ9CPazW0o0cVzv+oieo14IUnEDdot4LySvq5jWGy+p5l2X0mVppFPepHwLRfXXEuuptUCvqsHo7rLqqHjQT6kMZ0ZL6UX2lvneliM9Z1+UmtUcdUG+o31wdS+oddSjOlWz+eZWB/cABoB/YSv0GTwOPgafA9zjwB58rtSzklNU8AAAAAElFTkSuQmCC"/>
+        <image id="image0" width="17" height="26" href="img/header/mouse.png"/>
       </defs>
     </svg>
   </div>
@@ -138,7 +141,7 @@
         <!-- 1х: 870px; 2x: 1740px -->
         <img class="about__video-img" src="img/about/about-desktop@1x.png" srcset="img/about/about-desktop@2x.png 2x" alt="кадр видео о проекте Маса">
       </picture>
-      <button>
+      <button class="about__play-button">
         <span class="visually-hidden">воспроизвести видео</span>
         <svg class="about__video-icon">
           <use xlink:href="#play-button"></use>
@@ -151,32 +154,28 @@
     <div class="programs__about">
       <ul class="programs__name">
         <li class="programs__name-item programs__item-active">
-          <a class="programs__item-title programs__item-title--general">общие</a>
+          <a class="programs__item-title programs__item-title--general" href="#general">общие</a>
         </li>
         <li class="programs__name-item">
-          <a class="programs__item-title programs__item-title--academic">академические</a>
+          <a class="programs__item-title programs__item-title--academic" href="#academic">академические</a>
         </li>
         <li class="programs__name-item">
-          <a class="programs__item-title programs__item-title--internships">стажировки</a>
+          <a class="programs__item-title programs__item-title--internships" href="#internships">стажировки</a>
         </li>
         <li class="programs__name-item">
-          <a class="programs__item-title programs__item-title--volunteering">волонтёрство</a>
+          <a class="programs__item-title programs__item-title--volunteering" href="#volunteering">волонтёрство</a>
         </li>
         <li class="programs__name-item">
-          <a class="programs__item-title programs__item-title--religious">религиозные</a>
+          <a class="programs__item-title programs__item-title--religious" href="#religious">религиозные</a>
         </li>
       </ul>
       <ul class="programs__description">
-        <li class="programs__item-description programs__item-description--active">
+        <li class="programs__item-description programs__item-description--active" id="#general">
           <h2>Общие</h2>
-          <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни
-            — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический
-            центр, живая лаборатория идей и творческого исследования. </p>
-          <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
-            законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это
-            в удивительной университетской среде.</p>
+          <p>Хочешь провести семестр или год в Израиле, знакомясь с различными культурами и идеями, традициями и стилем жизни, изучая иврит на программе Маса? Изучение иврита, одного из самых древних и необычных языков, не только увлекательно, но и крайне важно для успешной абсорбции в израильское общество и для твоего дальнейшего профессионального развития в Израиле. Качественное и эффективное изучение иврита  является одной из неотъемлемых составляющих всего учебного процесса на программах Маса.</p>
+          <p>Проект Маса предоставляет потрясающую возможность совершить незабываемое путешествие в страну с тысячелетней историей и уникальным образом жизни, где ты сможешь по-настоящему познать свои исторические корни и почувствовать себя неотъемлемой частью еврейского народа. Если ты задаешь себе вопросы: "Что делать дальше?", "Что изучать?", "Где жить?", "Где работать?" или, если, тебе просто хочется новых впечатлений, эмоций, новых друзей из самых разных стран мира, то не упусти свой шанс стать частью проекта Маса.</p>
         </li>
-        <li class="programs__item-description">
+        <li class="programs__item-description" id="#academic">
           <h2>Академические</h2>
           <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни
             — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический
@@ -185,32 +184,20 @@
             законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это
             в удивительной университетской среде.</p>
         </li>
-        <li class="programs__item-description">
+        <li class="programs__item-description" id="#internships">
           <h2>Стажировки</h2>
-          <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни
-            — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический
-            центр, живая лаборатория идей и творческого исследования. </p>
-          <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
-            законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это
-            в удивительной университетской среде.</p>
+          <p>Проект Маса предлагает выпускникам вузов и молодым профессионалам широкий выбор программ для продвижения карьеры, профессионального развития в разнообразных сферах и стажировки в Израиле.</p>
+          <p>Выберите для себя одну из многих возможностей для приобретения знаний, навыков и опыта, необходимых для профессионального развития в современном мире. Узнай больше профессиональном росте, карьере и стажировках в Израиле.</p>
         </li>
-        <li class="programs__item-description">
+        <li class="programs__item-description" id="#volunteering">
           <h2>Волонтёрство</h2>
-          <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни
-            — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический
-            центр, живая лаборатория идей и творческого исследования. </p>
-          <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
-            законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это
-            в удивительной университетской среде.</p>
+          <p>Маса предлагает уникальные возможности для волонтерской деятельности по всему Израилю. Вы сможете внести свой неоценимый вклад в развитие  израильского общества, сотрудничая с различными общинами и социально уязвимыми группами населения. Программы волонтерства фокусируются на создании и укреплении общин; помощи молодежи, находящейся в группе риска; поддержке мирного сосуществования евреев, арабов и других местных общин.</p>
+          <p>Все программы волонтерства проекта Маса опираются на еврейскую традицию "тикун олам" (совершенствование мира) и руководствуются принципами социальной ответственности и социальной справедливости..</p>
         </li>
-        <li class="programs__item-description">
+        <li class="programs__item-description" id="#religious">
           <h2>Религиозные</h2>
-          <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни
-            — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический
-            центр, живая лаборатория идей и творческого исследования. </p>
-          <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
-            законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это
-            в удивительной университетской среде.</p>
+          <p>Маса предлагает спектр программ, предназначенных для углубления связи с еврейской традицией и народом. Программы изучения иудаизма  варьируются от строгих междисциплинарных исследований еврейского народа и цивилизации, и изучения Торы в лучших мировых университетах до обучения в лучших йешивах и семинариях Израиля.</p>
+          <p>Получите возможность стать частью еврейского народа, понять свою идентичность, окунуться в духовную атмосферу еврейских ценностей и стать опытным общинным работником. Ваше путешествие вместе с Маса начинается здесь.</p>
         </li>
       </ul>
     </div>
@@ -240,6 +227,7 @@
     </div>
     <div class="help__info">
       <picture>
+        <!-- 1х: 581px; 2x: 1162px -->
         <source type="image/webp" srcset="img/help/about-moving-pic-desktop@1x.webp 1x, img/help/about-moving-pic-desktop@2x.webp 2x">
 
         <!-- 1х: 581px; 2x: 1162px -->
@@ -303,7 +291,7 @@
       <h1>#masaisrael</h1>
       <p>Познакомьтесь с программой от первого лица! Многие участники ведут блоги и фотодневники о жизни, учёбе и
         путешествиях в Израиле.</p>
-      <a>смотреть фото</a>
+      <a href="#">смотреть фото</a>
     </div>
   </section>
   <section class="faq">
@@ -312,77 +300,49 @@
       <ol class="faq__list">
         <li class="faq__list-item faq__list-item--first">
           <div class="faq__item">
-            <h3 class="faq__item-title faq__item-title--hide">Кто организатор? Какие сроки у программы?</h3>
-            <p class="faq__item-answer visually-hidden">Полная стоимость определяется организаторами в зависимости от
-              направления. В
-              большинстве случаев грант
-              «Маса»
-              не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного
-              участия.</p>
+            <h3 class="faq__item-question faq__item-question--hide">Кто организатор? Какие сроки у программы?</h3>
+            <p class="faq__item-answer">Программы, поддерживаемые проектом Маса, проводятся организаторами, которые фактически реализуют программы и несут ответственность за их успешное проведение. Сферы деятельности организаторов самые разные - университеты, колледжи и институты, туристические компании, молодежные движения и йешивы</p>
           </div>
         </li>
         <li class="faq__list-item faq__list-item--second">
           <div class="faq__item">
-            <h3 class="faq__item-title faq__item-title--hide">Что такое грант на обучение?</h3>
-            <p class="faq__item-answer visually-hidden">Полная стоимость определяется организаторами в зависимости от
-              направления. В
-              большинстве случаев грант
-              «Маса»
-              не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного
-              участия.</p>
+            <h3 class="faq__item-question faq__item-question--hide">Что такое грант на обучение?</h3>
+            <p class="faq__item-answer">Грант Маса - это основное средство, с помощью которого Еврейское агентство «Сохнут» и правительство Израиля намерены достичь цели проекта. Компания Маса - дочерняя компания Еврейского агентства, созданная для реализации проектов и выдающая гранты (для жителей СНГ и стран Балтии) в соответствии с продолжительностью программы и ее стоимостью.</p>
           </div>
         </li>
         <li class="faq__list-item faq__list-item--third">
           <div class="faq__item">
-            <h3 class="faq__item-title faq__item-title--hide">Как определяется стоимость программы?</h3>
-            <p class="faq__item-answer visually-hidden">Полная стоимость определяется организаторами в зависимости от
-              направления. В большинстве случаев грант
-              «Маса»
-              не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного
-              участия.</p>
+            <h3 class="faq__item-question faq__item-question--hide">Как определяется стоимость программы?</h3>
+            <p class="faq__item-answer">Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного участия.</p>
           </div>
         </li>
         <li class="faq__list-item faq__list-item--fourth">
           <div class="faq__item">
-            <h3 class="faq__item-title faq__item-title--hide">Что такое грант на обучение?</h3>
-            <p class="faq__item-answer visually-hidden">Полная стоимость определяется организаторами в зависимости от
-              направления. В
-              большинстве случаев грант
-              «Маса»
-              не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного
-              участия.</p>
+            <h3 class="faq__item-question faq__item-question--hide">Что такое грант на обучение?</h3>
+            <p class="faq__item-answer">Грант Маса - это основное средство, с помощью которого Еврейское агентство «Сохнут» и правительство Израиля намерены достичь цели проекта. Компания Маса - дочерняя компания Еврейского агентства, созданная для реализации проектов и выдающая гранты (для жителей СНГ и стран Балтии) в соответствии с продолжительностью программы и ее стоимостью.</p>
           </div>
         </li>
         <li class="faq__list-item faq__list-item--fifth">
           <div class="faq__item">
-            <h3 class="faq__item-title faq__item-title--hide">Признаётся ли учеба в рамках проекта для
+            <h3 class="faq__item-question faq__item-question--hide">Признаётся ли учеба в рамках проекта для
               дальнейшего обучения?</h3>
-            <p class="faq__item-answer visually-hidden">Полная стоимость определяется организаторами в зависимости от
-              направления. В
-              большинстве случаев грант
-              «Маса»
-              не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного
-              участия.</p>
+            <p class="faq__item-answer">Университеты Израиля и западных стран признают академическую учебу в рамках проекта Маса, если организатор заявляет об академической аккредитации его программы. Ситуация в СНГ более сложная, и признание обучения зависит, как правило, от решения каждого отдельного учебного заведения. Выясните заранее в Вашем учебном заведении, будет ли им признана Ваша учеба в рамках проекта Маса, или сможете ли Вы добиться такой аккредитации по возвращении из Израиля. Руководство проекта Маса не несет ответственности за академическую аккредитацию. За это отвечает только организатор учебной программы.</p>
           </div>
         </li>
         <li class="faq__list-item faq__list-item--sixth">
           <div class="faq__item">
-            <h3 class="faq__item-title faq__item-title--hide">Как выглдядит полный процесс регистрации
+            <h3 class="faq__item-question faq__item-question--hide">Как выглдядит полный процесс регистрации
               на программу «Маса»?</h3>
-            <p class="faq__item-answer visually-hidden">Полная стоимость определяется организаторами в зависимости от
-              направления. В
-              большинстве случаев грант
-              «Маса»
-              не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного
-              участия.</p>
+            <p class="faq__item-answer">Выбор программы. Связь с координатором выбранной программы и запись на консульскую проверку. Заполнение анкеты на сайте Маса. Загрузить документы об успешном прохождении консульской проверки на портал участников через личный кабинет. Получение студенческой визы А2 в консульстве на основании письма от Маса об одобренном гранте.</p>
           </div>
         </li>
       </ol>
     </div>
     <picture>
-      <source type="image/webp" srcset="img/help/about-moving-pic-desktop@1x.webp 1x, img/help/about-moving-pic-desktop@2x.webp 2x">
+      <!-- 1х: 645px; 2x: 1290px -->
+      <source type="image/webp" srcset="img/faq/faq-desktop@1x.webp 1x, img/faq/faq-desktop@2x.webp 2x">
 
-      <!-- 1х: 581px; 2x: 1162px -->
+      <!-- 1х: 645px; 2x: 1290px -->
       <img class="faq__img" src="img/faq/faq-desktop@1x.png" srcset="img/faq/faq-desktop@2x.png 2x" alt="фото рабочего процесса">
     </picture>
   </section>
@@ -394,10 +354,10 @@
           <picture>
             <!-- 1х: 240px; 2x: 480px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="img/review/review1-mobile@1x.webp 1x, img/review/review1-mobile@2x.webp 2x">
-            <!-- 1х: 870px; 2x: 1740px -->
+            <!-- 1х: 364px; 2x: 728px -->
             <source type="image/webp" srcset="img/review/review1-desktop@1x.webp 1x, img/review/review1-desktop@2x.webp 2x">
 
-            <!-- 1х: 364px; 2x: 728px -->
+            <!-- 1х: 240px; 2x: 480px -->
             <source media="(max-width: 767px)" srcset="img/review/review1-mobile@1x.png 1x, img/review/review1-mobile@2x.png 2x">
             <!-- 1х: 364px; 2x: 728px -->
             <img class="review__item-img" src="img/review/review1-desktop@1x.png" srcset="img/review/review1-desktop@2x.png 2x" alt="фото автора отзыва">
@@ -416,7 +376,7 @@
             один, у тебя есть практически
             круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные
             встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
-          <a>Читать подробнее</a>
+          <a href="#">Читать подробнее</a>
           <ul class="review__author-networks">
             <li class="review__author-networks-item">
               <a href="#">
@@ -450,10 +410,10 @@
           <picture>
             <!-- 1х: 240px; 2x: 480px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="img/review/review2-mobile@1x.webp 1x, img/review/review2-mobile@2x.webp 2x">
-            <!-- 1х: 870px; 2x: 1740px -->
+            <!-- 1х: 364px; 2x: 728px -->
             <source type="image/webp" srcset="img/review/review2-desktop@1x.webp 1x, img/review/review2-desktop@2x.webp 2x">
 
-            <!-- 1х: 364px; 2x: 728px -->
+            <!-- 1х: 240px; 2x: 480px -->
             <source media="(max-width: 767px)" srcset="img/review/review2-mobile@1x.png 1x, img/review/review2-mobile@2x.png 2x">
             <!-- 1х: 364px; 2x: 728px -->
             <img class="review__item-img" src="img/review/review2-desktop@1x.png" srcset="img/review/review2-desktop@2x.png 2x" alt="фото автора отзыва">
@@ -472,7 +432,7 @@
             один, у тебя есть практически
             круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные
             встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
-          <a>Читать подробнее</a>
+          <a href="#">Читать подробнее</a>
           <ul class="review__author-networks">
             <li class="review__author-networks-item">
               <a href="#">
@@ -506,10 +466,10 @@
           <picture>
             <!-- 1х: 240px; 2x: 480px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="img/review/review-mobile@1x.webp 1x, img/review/review-mobile@2x.webp 2x">
-            <!-- 1х: 870px; 2x: 1740px -->
+            <!-- 1х: 364px; 2x: 728px -->
             <source type="image/webp" srcset="img/review/review-desktop@1x.webp 1x, img/review/review-desktop@2x.webp 2x">
 
-            <!-- 1х: 364px; 2x: 728px -->
+            <!-- 1х: 240px; 2x: 480px -->
             <source media="(max-width: 767px)" srcset="img/review/review-mobile@1x.png 1x, img/review/review-mobile@2x.png 2x">
             <!-- 1х: 364px; 2x: 728px -->
             <img class="review__item-img" src="img/review/review-desktop@1x.png" srcset="img/review/review-desktop@2x.png 2x" alt="фото автора отзыва">
@@ -528,7 +488,7 @@
             один, у тебя есть практически
             круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные
             встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
-          <a>Читать подробнее</a>
+          <a href="#">Читать подробнее</a>
           <ul class="review__author-networks">
             <li class="review__author-networks-item">
               <a href="#">
@@ -562,10 +522,10 @@
           <picture>
             <!-- 1х: 240px; 2x: 480px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="img/review/review4-mobile@1x.webp 1x, img/review/review4-mobile@2x.webp 2x">
-            <!-- 1х: 870px; 2x: 1740px -->
+            <!-- 1х: 364px; 2x: 728px -->
             <source type="image/webp" srcset="img/review/review4-desktop@1x.webp 1x, img/review/review4-desktop@2x.webp 2x">
 
-            <!-- 1х: 364px; 2x: 728px -->
+            <!-- 1х: 240px; 2x: 480px -->
             <source media="(max-width: 767px)" srcset="img/review/review4-mobile@1x.png 1x, img/review/review4-mobile@2x.png 2x">
             <!-- 1х: 364px; 2x: 728px -->
             <img class="review__item-img" src="img/review/review4-desktop@1x.png" srcset="img/review/review4-desktop@2x.png 2x" alt="фото автора отзыва">
@@ -584,7 +544,7 @@
             один, у тебя есть практически
             круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные
             встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
-          <a>Читать подробнее</a>
+          <a href="#">Читать подробнее</a>
           <ul class="review__author-networks">
             <li class="review__author-networks-item">
               <a href="#">
@@ -618,10 +578,10 @@
           <picture>
             <!-- 1х: 240px; 2x: 480px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="img/review/review5-mobile@1x.webp 1x, img/review/review5-mobile@2x.webp 2x">
-            <!-- 1х: 870px; 2x: 1740px -->
+            <!-- 1х: 364px; 2x: 728px -->
             <source type="image/webp" srcset="img/review/review5-desktop@1x.webp 1x, img/review/review5-desktop@2x.webp 2x">
 
-            <!-- 1х: 364px; 2x: 728px -->
+            <!-- 1х: 240px; 2x: 480px -->
             <source media="(max-width: 767px)" srcset="img/review/review5-mobile@1x.png 1x, img/review/review5-mobile@2x.png 2x">
             <!-- 1х: 364px; 2x: 728px -->
             <img class="review__item-img" src="img/review/review5-desktop@1x.png" srcset="img/review/review5-desktop@2x.png 2x" alt="фото автора отзыва">
@@ -640,7 +600,7 @@
             один, у тебя есть практически
             круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные
             встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
-          <a>Читать подробнее</a>
+          <a href="#">Читать подробнее</a>
           <ul class="review__author-networks">
             <li class="review__author-networks-item">
               <a href="#">
@@ -674,10 +634,10 @@
           <picture>
             <!-- 1х: 240px; 2x: 480px -->
             <source type="image/webp" media="(max-width: 767px)" srcset="img/review/review6-mobile@1x.webp 1x, img/review/review6-mobile@2x.webp 2x">
-            <!-- 1х: 870px; 2x: 1740px -->
+            <!-- 1х: 364px; 2x: 728px -->
             <source type="image/webp" srcset="img/review/review6-desktop@1x.webp 1x, img/review/review6-desktop@2x.webp 2x">
 
-            <!-- 1х: 364px; 2x: 728px -->
+            <!-- 1х: 240px; 2x: 480px -->
             <source media="(max-width: 767px)" srcset="img/review/review6-mobile@1x.png 1x, img/review/review6-mobile@2x.png 2x">
             <!-- 1х: 364px; 2x: 728px -->
             <img class="review__item-img" src="img/review/review6-desktop@1x.png" srcset="img/review/review6-desktop@2x.png 2x" alt="фото автора отзыва">
@@ -696,7 +656,7 @@
             один, у тебя есть практически
             круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные
             встречи, языковой курс а еще и поездки всей программой в разные уголки страны.</p>
-          <a>Читать подробнее</a>
+          <a href="#">Читать подробнее</a>
           <ul class="review__author-networks">
             <li class="review__author-networks-item">
               <a href="#">
@@ -812,7 +772,7 @@
       <form class="contacts__callback-form">
         <input type="text" name="name-field" id="name" value="" placeholder="имя" required>
         <label for="name" class="visually-hidden">Имя</label>
-        <input type="tel" name="tel-field" id="phone" value="" placeholder="+7 (923) 41" required>
+        <input type="tel" name="tel-field" id="phone" value="" placeholder="телефон" required>
         <label for="phone" class="visually-hidden">Номер телефона</label>
         <button type="submit">перезвоните мне</button>
       </form>
@@ -827,9 +787,11 @@
     <a class="page-footer__logo">
       <span class="visually-hidden">Masa - путешествие в Израиль</span>
       <picture>
-        <source media="(max-width: 767px)"
-                srcset="img/footer/logo-footer-mobile@1x.png 1x, img/footer/logo-footer-mobile@2x.png 2x">
-        <img class="page-footer__logo-img" src="img/footer/logo-footer-desktop@1x.png" srcset="img/footer/logo-footer-desktop@2x.png 2x" alt="Маса-путешествие в Израиль">
+        <!-- 1х: 99px; 2x: 198px -->
+        <source media="(max-width: 767px)" srcset="img/footer/logo-footer-mobile@1x.png 1x, img/footer/logo-footer-mobile@2x.png 2x">
+
+        <!-- 1х: 85px; 2x: 170px -->
+        <img class="page-footer__logo-img" src="img/footer/logo-footer-desktop@1x.png" srcset="img/footer/logo-footer-desktop@2x.png 2x" alt="Логотип проекта Маса">
       </picture>
     </a>
 
@@ -865,8 +827,10 @@
   </div>
 </footer>
 
-
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mask.js"></script>
 <script src="js/vendor.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>

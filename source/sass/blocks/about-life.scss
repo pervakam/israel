@@ -16,7 +16,7 @@
 }
 
 .about-life h1 {
-  font-family: "Montserrat";
+  font-family: $montserrat;
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;
@@ -51,7 +51,7 @@
 }
 
 .about-life__item p {
-  font-family: "Raleway";
+  font-family: $raleway;
   font-style: normal;
   font-weight: 800;
   font-size: 21px;
@@ -252,7 +252,6 @@
   }
 
   .about-life__list {
-
     width: 100%;
     height: auto;
     align-content: center;
@@ -375,7 +374,6 @@
     background-color: $black;
     border: 1px solid #ffffff;
     opacity: 0.2;
-
 
     &--active {
       width: 6px;

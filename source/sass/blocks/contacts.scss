@@ -30,7 +30,7 @@
 }
 
 .contacts__about h1 {
-  font-family: "Montserrat";
+  font-family: $montserrat;
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;
@@ -222,6 +222,18 @@
 
   &:focus {
     border: 2px solid $yellow;
+  }
+
+  &:hover {
+    border: 2px solid $light-black;
+  }
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    font-variant: small-caps;
+    opacity: 0.5;
   }
 }
 
