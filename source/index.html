@@ -238,7 +238,7 @@
         <h1>хочу поехать!</h1>
         <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
         <form class="help__form">
-          <input type="tel" name="tel-field" id="tel-field" value="" placeholder="телефон" required>
+          <input type="tel" name="tel-field" id="tel-field" placeholder="телефон" required>
           <label for="tel-field" class="visually-hidden">телефон</label>
           <button type="submit">перезвоните мне</button>
         </form>
@@ -295,91 +295,105 @@
       и познакомиться с богатой
       культурно-исторической жизнью Израиля и его жителей.</p>
     <div class="about-life__swiper">
-      <ul class="about-life__list">
-        <li class="about-life__item about-life__item--history">
+      <div class="about-life__list">
+        <div class="about-life__item about-life__item--history">
           <picture>
             <!-- 1х: 288px; 2x: 576px -->
             <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/about-life/history-mobile@1x.webp 1x, img/about-life/history-mobile@2x.webp 2x">
             <!-- 1х: 482px; 2x: 964px -->
-            <source type="image/webp" srcset="img/about-life/history-desktop@1x.webp 1x, img/about-life/history-desktop@2x.webp 2x">
+            <source type="image/webp"
+                    srcset="img/about-life/history-desktop@1x.webp 1x, img/about-life/history-desktop@2x.webp 2x">
 
             <!-- 1х: 288px; 2x: 576px -->
-            <source media="(max-width: 767px)" srcset="img/about-life/history-mobile@1x.png 1x, img/about-life/history-mobile@2x.png 2x">
+            <source media="(max-width: 767px)"
+                    srcset="img/about-life/history-mobile@1x.png 1x, img/about-life/history-mobile@2x.png 2x">
             <!-- 1х: 482px; 2x: 964px -->
-            <img class="about-life__img" src="img/about-life/history-desktop@1x.png" srcset="img/about-life/history-desktop@2x.png 2x"
+            <img class="about-life__img" src="img/about-life/history-desktop@1x.png"
+                 srcset="img/about-life/history-desktop@2x.png 2x"
                  alt="фоновое изображение экскурсии по Израилю и знакомство с его историей">
           </picture>
           <p>Экскурсии по Израилю и знакомство с его историей</p>
-        </li>
-        <li class="about-life__item about-life__item--language">
+        </div>
+        <div class="about-life__item about-life__item--language">
           <picture>
             <!-- 1х: 288px; 2x: 576px -->
             <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/about-life/language-mobile@1x.webp 1x, img/about-life/language-mobile@2x.webp 2x">
             <!-- 1х: 211px; 2x: 422px -->
-            <source type="image/webp" srcset="img/about-life/language-desktop@1x.webp 1x, img/about-life/language-desktop@2x.webp 2x">
+            <source type="image/webp"
+                    srcset="img/about-life/language-desktop@1x.webp 1x, img/about-life/language-desktop@2x.webp 2x">
 
             <!-- 1х: 288px; 2x: 576px -->
-            <source media="(max-width: 767px)" srcset="img/about-life/language-mobile@1x.png 1x, img/about-life/language-mobile@2x.png 2x">
+            <source media="(max-width: 767px)"
+                    srcset="img/about-life/language-mobile@1x.png 1x, img/about-life/language-mobile@2x.png 2x">
             <!-- 1х: 211px; 2x: 422px -->
-            <img class="about-life__img" src="img/about-life/language-desktop@1x.png" srcset="img/about-life/language-desktop@2x.png 2x"
+            <img class="about-life__img" src="img/about-life/language-desktop@1x.png"
+                 srcset="img/about-life/language-desktop@2x.png 2x"
                  alt="фоновое изображение изучение иврита">
           </picture>
           <p>Изучение иврита</p>
-        </li>
-        <li class="about-life__item about-life__item--projects">
+        </div>
+        <div class="about-life__item about-life__item--projects">
           <picture>
             <!-- 1х: 288px; 2x: 576px -->
             <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/about-life/projects-mobile@1x.webp 1x, img/about-life/projects-mobile@2x.webp 2x">
             <!-- 1х: 411px; 2x: 822px -->
-            <source type="image/webp" srcset="img/about-life/projects-desktop@1x.webp 1x, img/about-life/projects-desktop@2x.webp 2x">
+            <source type="image/webp"
+                    srcset="img/about-life/projects-desktop@1x.webp 1x, img/about-life/projects-desktop@2x.webp 2x">
 
             <!-- 1х: 288px; 2x: 576px -->
-            <source media="(max-width: 767px)" srcset="img/about-life/projects-mobile@1x.png 1x, img/about-life/projects-mobile@2x.png 2x">
+            <source media="(max-width: 767px)"
+                    srcset="img/about-life/projects-mobile@1x.png 1x, img/about-life/projects-mobile@2x.png 2x">
             <!-- 1х: 411px; 2x: 822px -->
-            <img class="about-life__img" src="img/about-life/projects-desktop@1x.png" srcset="img/about-life/projects-desktop@2x.png 2x"
+            <img class="about-life__img" src="img/about-life/projects-desktop@1x.png"
+                 srcset="img/about-life/projects-desktop@2x.png 2x"
                  alt="фоновое изображение совместные творческие проекты с израильской молодёжью">
           </picture>
           <p>Совместные творческие проекты с израильской молодёжью</p>
-        </li>
-        <li class="about-life__item about-life__item--study">
+        </div>
+        <div class="about-life__item about-life__item--study">
           <picture>
             <!-- 1х: 288px; 2x: 576px -->
             <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/about-life/study-mobile@1x.webp 1x, img/about-life/study-mobile@2x.webp 2x">
             <!-- 1х: 411px; 2x: 822px -->
-            <source type="image/webp" srcset="img/about-life/study-desktop@1x.webp 1x, img/about-life/study-desktop@2x.webp 2x">
+            <source type="image/webp"
+                    srcset="img/about-life/study-desktop@1x.webp 1x, img/about-life/study-desktop@2x.webp 2x">
 
             <!-- 1х: 288px; 2x: 576px -->
-            <source media="(max-width: 767px)" srcset="img/about-life/study-mobile@1x.png 1x, img/about-life/study-mobile@2x.png 2x">
+            <source media="(max-width: 767px)"
+                    srcset="img/about-life/study-mobile@1x.png 1x, img/about-life/study-mobile@2x.png 2x">
             <!-- 1х: 411px; 2x: 822px -->
-            <img class="about-life__img" src="img/about-life/study-desktop@1x.png" srcset="img/about-life/study-desktop@2x.png 2x"
+            <img class="about-life__img" src="img/about-life/study-desktop@1x.png"
+                 srcset="img/about-life/study-desktop@2x.png 2x"
                  alt="фоновое изображение обучение современным навыкам и профессиям">
           </picture>
           <p>Обучение современным навыкам и профессиям</p>
-        </li>
-        <li class="about-life__item about-life__item--leader">
+        </div>
+        <div class="about-life__item about-life__item--leader">
           <picture>
             <!-- 1х: 288px; 2x: 576px -->
             <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/about-life/leader-mobile@1x.webp 1x, img/about-life/leader-mobile@2x.webp 2x">
             <!-- 1х: 214px; 2x: 428px -->
-            <source type="image/webp" srcset="img/about-life/leader-desktop@1x.webp 1x, img/about-life/leader-desktop@2x.webp 2x">
+            <source type="image/webp"
+                    srcset="img/about-life/leader-desktop@1x.webp 1x, img/about-life/leader-desktop@2x.webp 2x">
 
             <!-- 1х: 288px; 2x: 576px -->
-            <source media="(max-width: 767px)" srcset="img/about-life/leader-mobile@1x.png 1x, img/about-life/leader-mobile@2x.png 2x">
+            <source media="(max-width: 767px)"
+                    srcset="img/about-life/leader-mobile@1x.png 1x, img/about-life/leader-mobile@2x.png 2x">
             <!-- 1х: 214px; 2x: 428px -->
-            <img class="about-life__img" src="img/about-life/leader-desktop@1x.png" srcset="img/about-life/leader-desktop@2x.png 2x"
+            <img class="about-life__img" src="img/about-life/leader-desktop@1x.png"
+                 srcset="img/about-life/leader-desktop@2x.png 2x"
                  alt="фоновое изображение развитие лидерства">
           </picture>
           <p>Развитие лидерства</p>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
-    <div class="swiper-pagination">
-    </div>
+    <div class="swiper-pagination"></div>
   </section>
   <section class="photo">
     <div class="photo__description">
@@ -929,22 +943,6 @@
         <label for="phone" class="visually-hidden">Номер телефона</label>
         <button type="submit">перезвоните мне</button>
       </form>
-    </div>
-  </section>
-  <section class="slider">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-        <div class="swiper-slide">Slide 10</div>
-      </div>
     </div>
   </section>
 </main>

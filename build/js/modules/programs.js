@@ -14,15 +14,23 @@
     });
   });
 
-    if (window.innerWidth <= 767) {
-      var swiper = new Swiper('.swiper-container');
-
-      programSwiperContainer.classList.add('swiper-container');
-      programSwiperWrapper.classList.add('swiper-wrapper');
-
-      programTypeButton.forEach(function (it) {
-        it.classList.add('swiper-slide');
-      });
-    }
+  // if (window.innerWidth <= 767) {
+  //   var swiper = new Swiper('.swiper-container', {
+  //     direction: 'vertical',
+  //     loop: true,
+  //
+  //     // If we need pagination
+  //     pagination: {
+  //       el: '.swiper-pagination',
+  //     },
+  //   });
+  //
+  //   programSwiperContainer.classList.add('swiper-container');
+  //   programSwiperWrapper.classList.add('swiper-wrapper');
+  //
+  //   programTypeButton.forEach(function (it) {
+  //     it.classList.add('swiper-slide');
+  //   });
+  // }
 
 })();

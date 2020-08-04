@@ -308,12 +308,16 @@
     margin: 0;
     padding: 0;
     display: flex;
-    width: 800px;
+    align-items: flex-start;
+    width: 100%;
   }
 
   .programs__name-item {
     margin-bottom: 4px;
-    width: 181px;
+    display: block;
+    box-sizing: border-box;
+    min-width: 181px;
+    max-width: 181px;
     height: 48px;
     padding: 16px 0 0 52px;
   }

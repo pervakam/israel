@@ -1,10 +1,11 @@
 :root {
-  /*
   --swiper-pagination-color: $yellow;
-  */
 }
+
 .swiper-pagination {
-  position: absolute;
+  //position: absolute;
+  margin: 4px auto 0;
+  padding-left: 3px;
   text-align: center;
   transition: 300ms opacity;
   transform: translate3d(0,0,0);
@@ -16,7 +17,7 @@
 }
 /* Common Styles */
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
-  bottom: 10px;
+  bottom: 0;
   left: 0;
   width: 100%;
 }
@@ -48,12 +49,13 @@
   }
 }
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
   display: inline-block;
   border-radius: 100%;
   background: #000000;
-  opacity: 1;
+  opacity: 0.2;
   @at-root button#{&} {
     border: none;
     margin: 0;
@@ -66,6 +68,8 @@
   }
 }
 .swiper-pagination-bullet-active {
+  width: 8px;
+  height: 8px;
   opacity: 1;
   background: $yellow;
 }
