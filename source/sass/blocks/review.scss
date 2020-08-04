@@ -142,12 +142,14 @@
 
   &--prev {
     background-image: url("../img/svg/arrow-left.svg");
+    background-repeat: no-repeat;
     margin-right: 11px;
     right: -47px;
   }
 
   &--next {
     background-image: url("../img/svg/arrow-right.svg");
+    background-repeat: no-repeat;
     right: -63px;
   }
 }

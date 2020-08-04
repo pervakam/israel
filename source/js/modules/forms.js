@@ -6,41 +6,34 @@
   var callbackFormTelField = callbackForm.querySelector('input[name="tel-field"]');
 
   var helpForm = document.querySelector('.help__form');
-  var helpFormTelField = callbackForm.querySelector('input[name="phone-field"]');
+  var helpFormTelField = helpForm.querySelector('input[name="tel-field"]');
 
   var contactsCallbackForm = document.querySelector('.contacts__callback-form');
-  var contactsFormNameField = callbackForm.querySelector('input[name="name-field"]');
-  var contactsFormTelField = callbackForm.querySelector('input[name="tel-field"]');
-
-  var localStorage = {}
-
+  var contactsFormNameField = contactsCallbackForm.querySelector('input[name="name-field"]');
+  var contactsFormTelField = contactsCallbackForm.querySelector('input[name="tel-field"]');
 
   var showSuccessModalForCallback = function (evt) {
     window.callback.closeCallbackModal();
     window.success.showSuccessModal(evt);
+    localStorage.setItem('callbackFormName', callbackFormNameField.value);
+    localStorage.setItem('callbackFormTel', callbackFormTelField.value);
     callbackForm.reset();
-    // localStorage.setItem('callbackFormName', callbackFormNameField.value);
-    // localStorage.setItem('callbackFormTel', callbackFormTelField.value);
   };
-
-
 
   var showSuccessModalForHelp = function (evt) {
     window.success.showSuccessModal(evt);
-    localStorage['helpFormTel'] = helpFormTelField.value;
-    // localStorage.setItem('helpFormTel', helpFormTelField.value);
-    console.log(helpFormTelField.value);
-    // helpForm.reset();
+    localStorage.setItem('helpFormTel', helpFormTelField.value);
+    helpForm.reset();
   };
 
   var showSuccessModalForContacts = function (evt) {
     window.success.showSuccessModal(evt);
+    localStorage.setItem('contactsFormName', contactsFormNameField.value);
+    localStorage.setItem('contactsFormTel', contactsFormTelField.value);
     contactsCallbackForm.reset();
-    // localStorage.setItem('contactsFormName', contactsFormNameField.value);
-    // localStorage.setItem('contactsFormTel', contactsFormTelField.value);
   };
 
-////// отправка формы обратного звонка ///////////
+////// отправка формы обратного звонка и запись в localStorage ///////////
   callbackForm.addEventListener('submit', showSuccessModalForCallback);
 
   helpForm.addEventListener('submit', showSuccessModalForHelp);
@@ -50,21 +43,9 @@
 ////// валидация ввода номера телефона ///////////
   $('input[type="tel"]').mask('+7 000-000-00-00',
     {
-      placeholder: "телефон",
-      selectOnFocus: true
+      placeholder: 'телефон',
+      selectOnFocus: true,
     });
-
-////// запись в localStorage ///////////
-//   var telCallbackModalField = document.getElementById('tel-field');
-//   var nameCallbackModalField = document.getElementById('name-field');
-  var telHelpField = document.getElementById('phone-field');
-//   var telContactsField = document.getElementById('phone');
-//   var nameContactsField = document.getElementById('name');
-
-  // telHelpField.addEventListener('change', function () {
-  //   telHelpField.value = localStorage.setItem('helpFormTel', telHelpField.value);
-  //   console.log(telHelpField.value)
-  // })
 
 
 })();

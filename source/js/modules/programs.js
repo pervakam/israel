@@ -19,7 +19,10 @@
     programTypeButton.forEach(function (it) {
       it.classList.add('swiper-slide');
     });
-    var swiper = new Swiper('.swiper-container');
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+    });
+    programSwiperWrapper.style.width = '90vw';
   };
 
   var swiperDeactivation = function () {

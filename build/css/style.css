@@ -318,6 +318,7 @@ html {
   height: 100%; }
 
 body {
+  width: 100%;
   min-width: 768px;
   background-color: #ffffff;
   margin: 0 auto;
@@ -333,6 +334,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow-x: hidden; }
 
 .no-scroll {
@@ -711,7 +715,7 @@ body {
             box-shadow: 0 0 0 0;
     border-radius: 0;
     left: 0;
-    top: -577px; }
+    top: -605px; }
   .callback-modal h2 {
     font-size: 24px;
     line-height: 29px;
@@ -886,6 +890,7 @@ body {
   .success-modal {
     padding: 16px 16px 185px 14px;
     width: 100%;
+    height: 100%;
     min-width: 320px;
     -webkit-box-shadow: 0 0 0 0;
             box-shadow: 0 0 0 0;
@@ -2557,10 +2562,12 @@ body {
   background-color: transparent; }
   .review__button--prev {
     background-image: url("../img/svg/arrow-left.svg");
+    background-repeat: no-repeat;
     margin-right: 11px;
     right: -47px; }
   .review__button--next {
     background-image: url("../img/svg/arrow-right.svg");
+    background-repeat: no-repeat;
     right: -63px; }
 
 .review__author-networks {
@@ -3168,9 +3175,7 @@ body {
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  -ms-scroll-snap-type: none;
-      scroll-snap-type: none; }
+          box-sizing: content-box; }
 
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
@@ -3261,13 +3266,9 @@ body {
 .swiper-container-css-mode > .swiper-wrapper > .swiper-slide {
   scroll-snap-align: start start; }
 
-.swiper-scroll {
-  -ms-scroll-snap-type: none;
-      scroll-snap-type: none; }
-
 .swiper-container-horizontal.swiper-container-css-mode > .swiper-wrapper {
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory; }
+  -ms-scroll-snap-type: x proximity;
+      scroll-snap-type: x proximity; }
 
 .swiper-container-vertical.swiper-container-css-mode > .swiper-wrapper {
   -ms-scroll-snap-type: y mandatory;

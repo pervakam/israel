@@ -21,7 +21,7 @@
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
-  scroll-snap-type: none;
+
 }
 
 .swiper-container-android .swiper-slide,
@@ -118,14 +118,10 @@
   }
 }
 
-.swiper-scroll {
-    scroll-snap-type: none;
-  }
-
 
 .swiper-container-horizontal.swiper-container-css-mode {
   > .swiper-wrapper {
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
   }
 }
 
