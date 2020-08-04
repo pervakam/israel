@@ -93,12 +93,16 @@
     background-repeat: no-repeat;
 
     background-size: auto 587px;
-    background-position-x: 23%;
+    background-position-x: center;
     background-position-y: -230px;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/photo/bg-tablet@2x.png");
     }
+  }
+
+  .photo__description {
+    margin: 0 auto;
   }
 }
 

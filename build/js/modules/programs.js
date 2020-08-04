@@ -14,13 +14,15 @@
     });
   });
 
-  var swiper = new Swiper('.swiper-container');
+    if (window.innerWidth <= 767) {
+      var swiper = new Swiper('.swiper-container');
 
-  programSwiperContainer.classList.add('swiper-container');
-  programSwiperWrapper.classList.add('swiper-wrapper');
+      programSwiperContainer.classList.add('swiper-container');
+      programSwiperWrapper.classList.add('swiper-wrapper');
 
-  programTypeButton.forEach(function (it) {
-    it.classList.add('swiper-slide');
-  });
+      programTypeButton.forEach(function (it) {
+        it.classList.add('swiper-slide');
+      });
+    }
 
 })();
