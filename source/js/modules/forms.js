@@ -4,6 +4,7 @@
   var callbackForm = document.querySelector('.callback-modal__form');
   var callbackFormNameField = callbackForm.querySelector('input[name="name-field"]');
   var callbackFormTelField = callbackForm.querySelector('input[name="tel-field"]');
+  var formInputs = document.querySelectorAll('input');
 
   var helpForm = document.querySelector('.help__form');
   var helpFormTelField = helpForm.querySelector('input[name="tel-field"]');
@@ -33,6 +34,20 @@
     contactsCallbackForm.reset();
   };
 
+  var showInvalidBorder = function (formField) {
+    formField.classList.add('invalid-input');
+    formField.addEventListener('click', function () {
+      formField.classList.remove('invalid-input');
+    });
+  };
+
+  formInputs.forEach( function (formField) {
+    formField.addEventListener('invalid', function () {
+      showInvalidBorder(formField)
+    });
+  });
+
+
 ////// отправка формы обратного звонка и запись в localStorage ///////////
   callbackForm.addEventListener('submit', showSuccessModalForCallback);
 
@@ -46,8 +61,6 @@
       placeholder: 'телефон',
       selectOnFocus: true,
     });
-
-
 })();
 
 

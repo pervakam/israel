@@ -359,6 +359,11 @@ body {
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%); }
 
+.invalid-input:focus {
+  border: 2px solid #ffc341; }
+  .invalid-input:focus:invalid {
+    border: 2px solid #ff0000; }
+
 @font-face {
   font-family: "Fira Sans";
   font-weight: normal;
