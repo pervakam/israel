@@ -21828,5 +21828,3 @@
 })));
 //# sourceMappingURL=swiper.js.map
 })();
-
-

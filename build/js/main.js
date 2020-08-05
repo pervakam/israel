@@ -198,6 +198,9 @@
 'use strict';
 
 (function () {
+  var PROGRAM_NAME_MOB_WIDTH = '90vw';
+  var PROGRAM_NAME_DESK_WIDTH = '229px';
+
   var programSwiperContainer = document.querySelector('.programs__name-container');
   var programSwiperWrapper = document.querySelector('.programs__name');
   var programTypeButton = document.querySelectorAll('.programs__name-item');
@@ -219,7 +222,7 @@
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: 'auto',
     });
-    programSwiperWrapper.style.width = '90vw';
+    programSwiperWrapper.style.width = PROGRAM_NAME_MOB_WIDTH;
   };
 
   var swiperDeactivation = function () {
@@ -228,6 +231,7 @@
     programTypeButton.forEach(function (it) {
       it.classList.remove('swiper-slide');
     })
+    programSwiperWrapper.style.width = PROGRAM_NAME_DESK_WIDTH;
   };
 
   if (window.matchMedia("(max-width: 767px)").matches) {

@@ -44,10 +44,9 @@ body {
 .invalid-input {
   &:focus {
     border: 2px solid $yellow;
+
     &:invalid {
       border: 2px solid $invalid-input;
     }
   }
 }
-
-

@@ -21,12 +21,12 @@
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
-
+  scroll-snap-type: none;
 }
 
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
-  transform: translate3d(0px, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .swiper-container-multirow > .swiper-wrapper {
@@ -57,7 +57,8 @@
 
 /* Auto Height */
 .swiper-container-autoheight {
-  &, .swiper-slide {
+  &,
+  .swiper-slide {
     height: auto;
   }
 
@@ -71,11 +72,20 @@
 .swiper-container-3d {
   perspective: 1200px;
 
-  .swiper-wrapper, .swiper-slide, .swiper-slide-shadow-left, .swiper-slide-shadow-right, .swiper-slide-shadow-top, .swiper-slide-shadow-bottom, .swiper-cube-shadow {
+  .swiper-wrapper,
+  .swiper-slide,
+  .swiper-slide-shadow-left,
+  .swiper-slide-shadow-right,
+  .swiper-slide-shadow-top,
+  .swiper-slide-shadow-bottom,
+  .swiper-cube-shadow {
     transform-style: preserve-3d;
   }
 
-  .swiper-slide-shadow-left, .swiper-slide-shadow-right, .swiper-slide-shadow-top, .swiper-slide-shadow-bottom {
+  .swiper-slide-shadow-left,
+  .swiper-slide-shadow-right,
+  .swiper-slide-shadow-top,
+  .swiper-slide-shadow-bottom {
     position: absolute;
     left: 0;
     top: 0;
@@ -118,10 +128,13 @@
   }
 }
 
+.swiper-scroll {
+  scroll-snap-type: none;
+}
 
 .swiper-container-horizontal.swiper-container-css-mode {
   > .swiper-wrapper {
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
   }
 }
 
@@ -130,4 +143,3 @@
     scroll-snap-type: y mandatory;
   }
 }
-
