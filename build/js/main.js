@@ -212,40 +212,40 @@
     });
   });
 
-  var swiperActivation = function () {
-    programSwiperContainer.classList.add('swiper-container');
-    programSwiperWrapper.classList.add('swiper-wrapper');
-    programTypeButton.forEach(function (it) {
-      it.classList.add('swiper-slide');
-    });
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 'auto',
-    });
-    programSwiperWrapper.style.width = PROGRAM_NAME_MOB_WIDTH;
-  };
-
-  var swiperDeactivation = function () {
-    programSwiperContainer.classList.remove('swiper-container');
-    programSwiperWrapper.classList.remove('swiper-wrapper');
-    programTypeButton.forEach(function (it) {
-      it.classList.remove('swiper-slide');
-    })
-    programSwiperWrapper.style.width = PROGRAM_NAME_DESK_WIDTH;
-  };
-
-  if (window.matchMedia("(max-width: 767px)").matches) {
-    swiperActivation()
-  }
-
-  var programDisplaySizeHandler = function () {
-    if (window.innerWidth <= 767) {
-      swiperActivation()
-    } else if (window.innerWidth >= 768) {
-      swiperDeactivation()
-    }
-  };
-
-  window.addEventListener('resize', programDisplaySizeHandler);
+  // var swiperActivation = function () {
+  //   programSwiperContainer.classList.add('swiper-container');
+  //   programSwiperWrapper.classList.add('swiper-wrapper');
+  //   programTypeButton.forEach(function (it) {
+  //     it.classList.add('swiper-slide');
+  //   });
+  //   var swiper = new Swiper('.swiper-container', {
+  //     slidesPerView: 'auto',
+  //   });
+  //   programSwiperWrapper.style.width = PROGRAM_NAME_MOB_WIDTH;
+  // };
+  //
+  // var swiperDeactivation = function () {
+  //   programSwiperContainer.classList.remove('swiper-container');
+  //   programSwiperWrapper.classList.remove('swiper-wrapper');
+  //   programTypeButton.forEach(function (it) {
+  //     it.classList.remove('swiper-slide');
+  //   })
+  //   programSwiperWrapper.style.width = PROGRAM_NAME_DESK_WIDTH;
+  // };
+  //
+  // if (window.matchMedia("(max-width: 767px)").matches) {
+  //   swiperActivation()
+  // }
+  //
+  // var programDisplaySizeHandler = function () {
+  //   if (window.innerWidth <= 767) {
+  //     swiperActivation()
+  //   } else if (window.innerWidth >= 768) {
+  //     swiperDeactivation()
+  //   }
+  // };
+  //
+  // window.addEventListener('resize', programDisplaySizeHandler);
 
 })();
 
@@ -339,17 +339,25 @@
   var swiperWrapper = document.querySelector('.about-life__list');
   var swiperContainer = document.querySelector('.about-life__swiper');
 
-  var swiperActivation = function () {
     swiperContainer.classList.add('swiper-container');
+    swiperWrapper.classList.add('swiper-wrapper');
+
+
+  var aboutLifeSwiper = new Swiper('.swiper-container', {
+    init: false,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    spaceBetween: 30,
+    watchOverflow: true,
+  });
+
+  var swiperActivation = function () {
     swiperWrapper.classList.add('swiper-wrapper');
     slideDescriptions.forEach(function (it) {
       it.classList.add('swiper-slide');
     });
-    var swiper = new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
+    aboutLifeSwiper.init(true);
   };
 
   var swiperDeactivation = function () {
@@ -357,20 +365,23 @@
     swiperWrapper.classList.remove('swiper-wrapper');
     slideDescriptions.forEach(function (it) {
       it.classList.remove('swiper-slide');
-    })
+    });
+    aboutLifeSwiper.update();
   };
 
-  if (window.matchMedia("(max-width: 767px)").matches) {
-    swiperActivation()
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    swiperActivation();
   }
 
   var displaySizeHandler = function () {
-    if (window.innerWidth <= 767) {
-      swiperActivation()
-    } else if (window.innerWidth >= 768) {
-      swiperDeactivation()
-    }
+    if (window.matchMedia('(max-width: 767px)').matches) {
+
+      swiperActivation();
+    } else if (window.matchMedia('(min-width: 768px)').matches) {
+        swiperDeactivation();
+    } else {}
   };
 
   window.addEventListener('resize', displaySizeHandler);
+
 })();

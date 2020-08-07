@@ -1,37 +1,28 @@
 'use strict';
 
 (function () {
-  var callbackForm = document.querySelector('.callback-modal__form');
-  var callbackFormNameField = callbackForm.querySelector('input[name="name-field"]');
-  var callbackFormTelField = callbackForm.querySelector('input[name="tel-field"]');
+  var forms = document.querySelectorAll('form');
   var formInputs = document.querySelectorAll('input');
 
-  var helpForm = document.querySelector('.help__form');
-  var helpFormTelField = helpForm.querySelector('input[name="tel-field"]');
+  var showSuccess = function (evt) {
+    var formTelInput = evt.target.querySelector('input[type="tel"]');
+    var formNameInput = evt.target.querySelector('input[type="text"]');
 
-  var contactsCallbackForm = document.querySelector('.contacts__callback-form');
-  var contactsFormNameField = contactsCallbackForm.querySelector('input[name="name-field"]');
-  var contactsFormTelField = contactsCallbackForm.querySelector('input[name="tel-field"]');
-
-  var showSuccessModalForCallback = function (evt) {
-    window.callback.closeCallbackModal();
+    evt.preventDefault();
+    if (!window.callback.callbackModalHide) {
+      window.callback.closeCallbackModal();
+    }
     window.success.showSuccessModal(evt);
-    localStorage.setItem('callbackFormName', callbackFormNameField.value);
-    localStorage.setItem('callbackFormTel', callbackFormTelField.value);
-    callbackForm.reset();
-  };
 
-  var showSuccessModalForHelp = function (evt) {
-    window.success.showSuccessModal(evt);
-    localStorage.setItem('helpFormTel', helpFormTelField.value);
-    helpForm.reset();
-  };
+    localStorage.setItem(formTelInput.type, formTelInput.value);
+    if (formNameInput !== null) {
+      localStorage.setItem(formNameInput.type, formNameInput.value);
+    }
 
-  var showSuccessModalForContacts = function (evt) {
-    window.success.showSuccessModal(evt);
-    localStorage.setItem('contactsFormName', contactsFormNameField.value);
-    localStorage.setItem('contactsFormTel', contactsFormTelField.value);
-    contactsCallbackForm.reset();
+    forms.forEach(function (form) {
+      form.reset();
+    })
+
   };
 
   var showInvalidBorder = function (formField) {
@@ -41,18 +32,28 @@
     });
   };
 
-  formInputs.forEach( function (formField) {
+  var setValue = function () {
+    formInputs.forEach(function (input) {
+      input.value = localStorage.getItem(input.type);
+    })
+  };
+
+  formInputs.forEach(function (formField) {
     formField.addEventListener('invalid', function () {
       showInvalidBorder(formField)
     });
+
   });
 
 ////// отправка формы обратного звонка и запись в localStorage ///////////
-  callbackForm.addEventListener('submit', showSuccessModalForCallback);
+  forms.forEach(function (form) {
+    form.addEventListener('submit', showSuccess);
+  });
+  window.addEventListener('load', setValue);
+  formInputs.forEach(function (input) {
+    input.addEventListener('click', setValue);
+  });
 
-  helpForm.addEventListener('submit', showSuccessModalForHelp);
-
-  contactsCallbackForm.addEventListener('submit', showSuccessModalForContacts);
 
 ////// валидация ввода номера телефона ///////////
   $('input[type="tel"]').mask('+7 000-000-00-00',
