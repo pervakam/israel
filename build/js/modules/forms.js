@@ -47,7 +47,6 @@
     });
   });
 
-
 ////// отправка формы обратного звонка и запись в localStorage ///////////
   callbackForm.addEventListener('submit', showSuccessModalForCallback);
 
@@ -62,5 +61,3 @@
       selectOnFocus: true,
     });
 })();
-
-
