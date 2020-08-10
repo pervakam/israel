@@ -1286,7 +1286,8 @@ body {
             flex-direction: column;
     width: 100%;
     max-width: 767px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-right: 0; }
   .programs__name {
     margin: 0;
     padding: 0;
@@ -1296,7 +1297,8 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    width: 100%; }
+    width: 100%;
+    overflow: auto; }
   .programs__name-item {
     margin-bottom: 4px;
     display: block;
@@ -1923,7 +1925,8 @@ body {
     margin-top: 0;
     text-align: center;
     background-image: none;
-    padding: 60px 16px; }
+    padding: 60px 16px;
+    overflow: hidden; }
   .about-life h1 {
     font-size: 32px;
     line-height: 39px;
@@ -3155,7 +3158,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  overflow: hidden;
   list-style: none;
   padding: 0;
   /* Fix of Webkit flickering */

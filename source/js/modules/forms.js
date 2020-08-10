@@ -20,7 +20,6 @@
     }
 
     forms.forEach(function (form) {
-      form.reset();
     })
 
   };
@@ -50,9 +49,6 @@
     form.addEventListener('submit', showSuccess);
   });
   window.addEventListener('load', setValue);
-  formInputs.forEach(function (input) {
-    input.addEventListener('click', setValue);
-  });
 
 
 ////// валидация ввода номера телефона ///////////

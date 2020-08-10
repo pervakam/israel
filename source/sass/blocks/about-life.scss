@@ -73,6 +73,7 @@
 
 .about-life__item {
   position: relative;
+
   width: 100%;
   height: fit-content;
 
@@ -198,6 +199,7 @@
     text-align: center;
     background-image: none;
     padding: 60px 16px;
+    overflow: hidden;
   }
 
   .about-life h1 {

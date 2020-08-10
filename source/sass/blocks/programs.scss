@@ -302,6 +302,7 @@
     width: 100%;
     max-width: 767px;
     margin: 0 auto;
+    padding-right: 0;
   }
 
   .programs__name {
@@ -310,6 +311,7 @@
     display: flex;
     align-items: flex-start;
     width: 100%;
+    overflow: auto;
   }
 
   .programs__name-item {

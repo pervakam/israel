@@ -50,6 +50,7 @@
   window.callback = {
     body: body,
     callbackOpenButton: callbackOpenButton,
-    closeCallbackModal: closeCallbackModal
+    closeCallbackModal: closeCallbackModal,
+    callbackModalHide: callbackModalHide,
   }
 })();
