@@ -53,6 +53,10 @@
   margin: 0 auto;
 }
 
+.about__video-img {
+  width: 100%;
+}
+
 .about__play-button {
   background: rgba(255, 255, 255, 0.32);
   position: absolute;
@@ -66,10 +70,9 @@
   top: calc(50% - 48px);
   left: calc(50% - 48px);
 
-  &:focus,
   &:hover {
     .about__video-icon {
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
     }
   }
 

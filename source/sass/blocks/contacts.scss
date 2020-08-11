@@ -204,12 +204,17 @@
 
 .contacts__callback-form {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin-top: 12px;
 }
 
 .contacts__callback-form input {
   border: 2px solid #e3e3e3;
+  -moz-border-top-colors: #e3e3e3;
+  -moz-border-right-colors: #e3e3e3;
+  -moz-border-bottom-colors: #e3e3e3;
+  -moz-border-left-colors: #e3e3e3;
   outline: none;
   cursor: pointer;
   border-radius: 80px;
@@ -217,7 +222,7 @@
   padding: 19px 0 20px 40px;
   margin-bottom: 8px;
   margin-right: 24px;
-  width: 250px;
+  min-width: 250px;
   height: 59px;
 
   &:focus {
@@ -248,7 +253,7 @@
   line-height: 20px;
   text-align: center;
   font-variant: small-caps;
-  width: 216px;
+  min-width: 216px;
   height: 59px;
   margin: 3px 0 4px;
   cursor: pointer;
@@ -264,6 +269,26 @@
   }
 }
 
+@media (max-width: $tablet-max-width) {
+  .contacts__callback {
+    justify-content: center;
+  }
+
+  .contacts__callback-form {
+    flex-direction: column;
+  }
+
+  .contacts__callback-form input {
+    width: 288px;
+    margin-right: 0;
+  }
+
+  .contacts__callback-form button {
+    width: 264px;
+    margin: 0 auto;
+  }
+
+}
 
 @media (max-width: $mobile-max-width) {
   .contacts {

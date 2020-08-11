@@ -26,6 +26,7 @@
 
 (function () {
   var body = document.querySelector('body');
+  var callback = document.querySelector('.callback');
   var callbackModalHide = document.querySelector('.callback-modal-hide');
   var callbackModal = document.querySelector('.callback-modal');
   var callbackCloseButton = document.querySelector('.callback-modal__close');
@@ -34,8 +35,10 @@
   var callbackFormNameField = callbackForm.querySelector('input[name="name-field"]');
 
   var closeCallbackModal = function () {
+    callback.classList.remove('callback__overlay');
     callbackModal.classList.add('callback-modal-hide');
     body.classList.remove('no-scroll');
+
     callbackCloseButton.removeEventListener('click', closeCallbackModal);
     window.removeEventListener('keydown', escCallbackModalHandler);
     document.removeEventListener('click', overlayCallbackModalHandler);
@@ -61,6 +64,7 @@
   };
 
   var openCallbackModal = function () {
+    callback.classList.add('callback__overlay');
     body.classList.add('no-scroll');
     callbackModal.classList.remove('callback-modal-hide');
     callbackFormNameField.focus();
@@ -75,13 +79,14 @@
     body: body,
     callbackOpenButton: callbackOpenButton,
     closeCallbackModal: closeCallbackModal,
-    callbackModalHide: callbackModalHide,
+    callbackModalHide: callbackModalHide
   }
 })();
 
 'use strict';
 
 (function () {
+  var success = document.querySelector('.success');
   var successModal = document.querySelector('.success-modal');
   var successCloseButton = document.querySelector('.success-modal__close');
   var successOkButton = document.querySelector('.success-modal__ok');
@@ -89,6 +94,7 @@
   var closeSuccessModal = function () {
     successModal.classList.add('success-modal-hide');
     window.callback.body.classList.remove('no-scroll');
+    success.classList.remove('success__overlay');
 
     successCloseButton.removeEventListener('click', closeSuccessModal);
     successOkButton.removeEventListener('click', closeSuccessModal);
@@ -118,6 +124,7 @@
 
   var showSuccessModal = function (evt) {
     evt.preventDefault();
+    success.classList.add('success__overlay');
     successModal.classList.remove('success-modal-hide');
     window.callback.body.classList.add('no-scroll');
 
@@ -140,9 +147,9 @@
     var formNameInput = evt.target.querySelector('input[type="text"]');
 
     evt.preventDefault();
-    if (!window.callback.callbackModalHide) {
-      window.callback.closeCallbackModal();
-    }
+
+    window.callback.closeCallbackModal();
+
     window.success.showSuccessModal(evt);
 
     localStorage.setItem(formTelInput.type, formTelInput.value);
@@ -200,6 +207,8 @@
   var programSwiperWrapper = document.querySelector('.programs__name');
   var programTypeButton = document.querySelectorAll('.programs__name-item');
   var programTypeDescription = document.querySelectorAll('.programs__item-description');
+  var intorScrollButton = document.querySelector('.page-header__scroll');
+  var programsSection = document.querySelector('.programs');
 
   programTypeButton.forEach(function (button, i) {
     button.addEventListener('click', function () {
@@ -208,6 +217,13 @@
     });
   });
 
+  intorScrollButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    programsSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
 })();
 
 'use strict';

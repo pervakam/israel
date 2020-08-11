@@ -80,7 +80,8 @@
       <img class="page-header__intro-pic" src="img/header/background-desktop@1x.jpg" srcset="img/header/background-desktop@2x.jpg 2x" alt="Учёба, путешествие и карьера для еврейской молодёжи">
     </picture>
     <p>Учёба, путешествие и карьера для еврейской молодёжи</p>
-    <svg class="page-header__pointer" width="76" height="132" viewBox="0 0 76 132" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <a class="page-header__scroll" href="#programs">
+      <svg class="page-header__pointer" width="76" height="132" viewBox="0 0 76 132" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <path d="M38 76V131.5" stroke="white"></path>
       <rect x="29" y="25" width="17" height="26" fill="url(#pattern0)"></rect>
       <circle cx="38" cy="38" r="26.5" stroke="white"></circle>
@@ -92,27 +93,32 @@
         <image id="image0" width="17" height="26" href="img/header/mouse.png"></image>
       </defs>
     </svg>
+    </a>
   </div>
-  <div class="callback-modal callback-modal-hide">
-    <button class="callback-modal__close" type="button"><span class="visually-hidden">закрыть</span></button>
-    <h2>Заказать звонок</h2>
-    <p>Оставьте ваши контактные данные, мы свяжемся с&nbsp;вами&nbsp;в&nbsp;течение рабочего дня и обязательно поможем найти ответ на
+  <div class="callback">
+    <div class="callback-modal callback-modal-hide">
+      <button class="callback-modal__close" type="button"><span class="visually-hidden">закрыть</span></button>
+      <h2>Заказать звонок</h2>
+      <p>Оставьте ваши контактные данные, мы свяжемся с&nbsp;вами&nbsp;в&nbsp;течение рабочего дня и обязательно поможем найти ответ на
       ваш вопрос!</p>
-    <form class="callback-modal__form">
-      <input type="text" name="name-field" id="name-field" value="" placeholder="имя" required="" autofocus="">
-      <label for="name-field" class="visually-hidden">Имя</label>
-      <input type="tel" name="tel-field" id="phone-field" value="" placeholder="телефон" required="">
-      <label for="phone-field" class="visually-hidden">Номер телефона</label>
-      <button type="submit">перезвоните мне</button>
-      <input type="checkbox" name="agree" id="agree-field" required="">
-      <label for="agree-field">Нажимая на кнопку, вы даёте согласие на&nbsp;обработку&nbsp;персональных&nbsp;данных</label>
-    </form>
+      <form class="callback-modal__form">
+        <input type="text" name="name-field" id="name-field" value="" placeholder="имя" required="" autofocus="">
+        <label for="name-field" class="visually-hidden">Имя</label>
+        <input type="tel" name="tel-field" id="phone-field" value="" placeholder="телефон" required="">
+        <label for="phone-field" class="visually-hidden">Номер телефона</label>
+        <button type="submit">перезвоните мне</button>
+        <input type="checkbox" name="agree" id="agree-field" required="">
+        <label for="agree-field">Нажимая на кнопку, вы даёте согласие на&nbsp;обработку&nbsp;персональных&nbsp;данных</label>
+      </form>
+    </div>
   </div>
-  <div class="success-modal success-modal-hide">
+  <div class="success">
+    <div class="success-modal success-modal-hide">
     <button class="success-modal__close" type="button"><span class="visually-hidden">закрыть</span></button>
     <h2>Заявка принята</h2>
     <p>Мы приняли ваши данные и вскоре мы перезвоним&nbsp;вам для уточнения деталей!</p>
     <button class="success-modal__ok" type="button">Понятно</button>
+  </div>
   </div>
 </header>
 
@@ -144,7 +150,7 @@
       </button>
     </div>
   </section>
-  <section class="programs">
+  <section class="programs" id="programs">
     <h1>Программы</h1>
     <div class="programs__about">
       <div class="programs__name-container">
@@ -889,7 +895,7 @@
         <a href="#">
           <span class="visually-hidden">Facebook</span>
           <svg class="page-footer__networks-facebook" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use class="review__icon-fill" xlink:href="#facebook"></use>
+            <use class="page-footer__icon-fill" xlink:href="#facebook"></use>
           </svg>
         </a>
       </li>
@@ -897,7 +903,7 @@
         <a href="#">
           <span class="visually-hidden">Twitter</span>
           <svg class="page-footer__networks-twitter" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use class="review__icon-fill" xlink:href="#twitter"></use>
+            <use class="page-footer__icon-fill" xlink:href="#twitter"></use>
           </svg>
         </a>
       </li>
@@ -905,7 +911,7 @@
         <a href="#">
           <span class="visually-hidden">Instagram</span>
           <svg class="page-footer__networks-instagram" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use class="review__icon-fill" xlink:href="#instagram"></use>
+            <use class="page-footer__icon-fill" xlink:href="#instagram"></use>
           </svg>
         </a>
       </li>

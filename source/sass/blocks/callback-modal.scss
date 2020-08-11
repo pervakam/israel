@@ -1,3 +1,13 @@
+.callback__overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(235, 235, 235, 0.95);
+}
+
 .callback-modal {
   position: fixed;
   z-index: 100;
@@ -164,17 +174,22 @@
 }
 
 @media (max-width: $mobile-max-width) {
+  .callback__overlay {
+    background: none;
+  }
+
   .callback-modal {
     position: relative;
     padding: 16px 16px 185px 10px;
     text-align: right;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     min-width: 320px;
 
     box-shadow: 0 0 0 0;
     border-radius: 0;
     left: 0;
-    top: -605px;
+    top: 0;
   }
 
   .callback-modal h2 {

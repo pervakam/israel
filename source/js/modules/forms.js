@@ -9,9 +9,9 @@
     var formNameInput = evt.target.querySelector('input[type="text"]');
 
     evt.preventDefault();
-    if (!window.callback.callbackModalHide) {
-      window.callback.closeCallbackModal();
-    }
+
+    window.callback.closeCallbackModal();
+
     window.success.showSuccessModal(evt);
 
     localStorage.setItem(formTelInput.type, formTelInput.value);
