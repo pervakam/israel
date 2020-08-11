@@ -2956,9 +2956,13 @@ body {
   margin-bottom: 8px;
   margin-right: 24px;
   min-width: 250px;
+<<<<<<< HEAD
   height: 59px;
   -webkit-box-shadow: none;
           box-shadow: none; }
+=======
+  height: 59px; }
+>>>>>>> 12f0ca36fe3985eecccbdb4d45bb9789fad88625
   .contacts__callback-form input:focus {
     border: 2px solid #ffc341; }
   .contacts__callback-form input:hover {
