@@ -80,7 +80,8 @@
       <img class="page-header__intro-pic" src="img/header/background-desktop@1x.jpg" srcset="img/header/background-desktop@2x.jpg 2x" alt="Учёба, путешествие и карьера для еврейской молодёжи">
     </picture>
     <p>Учёба, путешествие и карьера для еврейской молодёжи</p>
-    <svg class="page-header__pointer" width="76" height="132" viewBox="0 0 76 132" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <a class="page-header__scroll" href="#programs">
+      <svg class="page-header__pointer" width="76" height="132" viewBox="0 0 76 132" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <path d="M38 76V131.5" stroke="white"></path>
       <rect x="29" y="25" width="17" height="26" fill="url(#pattern0)"></rect>
       <circle cx="38" cy="38" r="26.5" stroke="white"></circle>
@@ -92,27 +93,32 @@
         <image id="image0" width="17" height="26" href="img/header/mouse.png"></image>
       </defs>
     </svg>
+    </a>
   </div>
-  <div class="callback-modal callback-modal-hide">
-    <button class="callback-modal__close" type="button"><span class="visually-hidden">закрыть</span></button>
-    <h2>Заказать звонок</h2>
-    <p>Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на
+  <div class="callback">
+    <div class="callback-modal callback-modal-hide">
+      <button class="callback-modal__close" type="button"><span class="visually-hidden">закрыть</span></button>
+      <h2>Заказать звонок</h2>
+      <p>Оставьте ваши контактные данные, мы свяжемся с&nbsp;вами&nbsp;в&nbsp;течение рабочего дня и обязательно поможем найти ответ на
       ваш вопрос!</p>
-    <form class="callback-modal__form">
-      <input type="text" name="name-field" id="name-field" value="" placeholder="имя" required="" autofocus="">
-      <label for="name-field" class="visually-hidden">Имя</label>
-      <input type="tel" name="tel-field" id="phone-field" value="" placeholder="телефон" required="">
-      <label for="phone-field" class="visually-hidden">Номер телефона</label>
-      <button type="submit">перезвоните мне</button>
-      <input type="checkbox" name="agree" id="agree-field" required="">
-      <label for="agree-field">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
-    </form>
+      <form class="callback-modal__form">
+        <input type="text" name="name-field" id="name-field" value="" placeholder="имя" required="" autofocus="">
+        <label for="name-field" class="visually-hidden">Имя</label>
+        <input type="tel" name="tel-field" id="phone-field" value="" placeholder="телефон" required="">
+        <label for="phone-field" class="visually-hidden">Номер телефона</label>
+        <button type="submit">перезвоните мне</button>
+        <input type="checkbox" name="agree" id="agree-field" required="">
+        <label for="agree-field">Нажимая на кнопку, вы даёте согласие на&nbsp;обработку&nbsp;персональных&nbsp;данных</label>
+      </form>
+    </div>
   </div>
-  <div class="success-modal success-modal-hide">
+  <div class="success">
+    <div class="success-modal success-modal-hide">
     <button class="success-modal__close" type="button"><span class="visually-hidden">закрыть</span></button>
     <h2>Заявка принята</h2>
-    <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+    <p>Мы приняли ваши данные и вскоре мы перезвоним&nbsp;вам для уточнения деталей!</p>
     <button class="success-modal__ok" type="button">Понятно</button>
+  </div>
   </div>
 </header>
 
@@ -121,7 +127,7 @@
     <div class="about__description">
       <h1>О программе</h1>
       <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60
-        на русском) и возможность стажировки в Израиле. В течение освоения программ предусмотрен грант от 4200 до
+        на русском) и возможность стажировки в Израиле. В&nbsp;течение&nbsp;освоения&nbsp;программ предусмотрен грант от 4200 до
         8400$.</p>
     </div>
     <div class="about__video">
@@ -144,7 +150,7 @@
       </button>
     </div>
   </section>
-  <section class="programs">
+  <section class="programs" id="programs">
     <h1>Программы</h1>
     <div class="programs__about">
       <div class="programs__name-container">
@@ -182,12 +188,12 @@
         </li>
         <li class="programs__item-description" id="#academic">
           <h2>Академические</h2>
-          <p>Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни
+          <p>Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями,&nbsp;традициями&nbsp;и&nbsp;стилем жизни
             — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический
             центр, живая лаборатория идей и творческого исследования. </p>
-          <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии,
-            законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете изучить все это
-            в удивительной университетской среде.</p>
+          <p>Может быть, Вы заинтересованы в&nbsp;изучении&nbsp;социологии, мира, юриспруденции, биологии, сравнительной религии,
+            законодательного и&nbsp;делового администрирования или искусства? Здесь, в Израиле, Вы сможете&nbsp;изучить&nbsp;все это
+            в&nbsp;удивительной университетской среде.</p>
         </li>
         <li class="programs__item-description" id="#internships">
           <h2>Стажировки</h2>
@@ -224,7 +230,7 @@
     <div class="help__callback">
       <div class="help__callback-form">
         <h1>хочу поехать!</h1>
-        <p>Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!</p>
+        <p>Оставьте свой телефон и мы свяжемся с вами, подберём&nbsp;куратора и ответим на все вопросы!</p>
         <form class="help__form">
           <input type="tel" name="tel-field" id="tel-field" placeholder="телефон" value="" required="">
           <label for="tel-field" class="visually-hidden">телефон</label>
@@ -256,12 +262,12 @@
         <p class="help__info-text">Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем
           городе. Вы получите актуальные сведения
           о доступных программах и городах, в которых можете пройти программу.</p>
-        <h3>Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:</h3>
+        <h3>Чтобы иметь возможность получить грант на обучение от&nbsp;4200&nbsp;д&nbsp;8400$, вы&nbsp;должны:</h3>
         <ol class="help__demands">
           <li class="help__demands-item help__demands-item--first">Быть в возрасте от 16 до 30 лет</li>
           <li class="help__demands-item help__demands-item--second">Иметь оконченное среднее образование</li>
           <li class="help__demands-item help__demands-item--third">Иметь документально подтверждённые еврейские корни
-            и пройти консульскую проверку
+            и&nbsp;пройти&nbsp;консульскую&nbsp;проверку
           </li>
           <li class="help__demands-item help__demands-item--fourth">За последние 2 года быть не больше 3х месяцев подряд
             непрерывно в Израиле.
@@ -274,7 +280,7 @@
     </div>
   </section>
   <section class="about-life">
-    <h1>Жизнь в Израиле</h1>
+    <h1>Жизнь в&nbsp;Израиле</h1>
     <p class="about-life__description">Помимо учёбы, в рамках программы у вас будет возможность путешествовать по стране
       и познакомиться с богатой
       культурно-исторической жизнью Израиля и его жителей.</p>
@@ -292,7 +298,7 @@
             <!-- 1х: 482px; 2x: 964px -->
             <img class="about-life__img" src="img/about-life/history-desktop@1x.png" srcset="img/about-life/history-desktop@2x.png 2x" alt="фоновое изображение экскурсии по Израилю и знакомство с его историей">
           </picture>
-          <p>Экскурсии по Израилю и знакомство с его историей</p>
+          <p>Экскурсии по Израилю и&nbsp;знакомство&nbsp;с&nbsp;его историей</p>
         </div>
         <div class="about-life__item about-life__item--language">
           <picture>
@@ -357,8 +363,8 @@
   <section class="photo">
     <div class="photo__description">
       <h1>#masaisrael</h1>
-      <p>Познакомьтесь с программой от первого лица! Многие участники ведут блоги и фотодневники о жизни, учёбе и
-        путешествиях в Израиле.</p>
+      <p>Познакомьтесь с программой от первого лица! Многие участники ведут блоги и фотодневники о&nbsp;жизни,&nbsp;учёбе и
+        путешествиях в&nbsp;Израиле.</p>
       <a href="#">смотреть фото</a>
     </div>
   </section>
@@ -368,7 +374,7 @@
       <ol class="faq__list">
         <li class="faq__list-item faq__list-item--first">
           <div class="faq__item">
-            <h3 class="faq__item-question faq__item-question--hide">Кто организатор? Какие сроки у программы?</h3>
+            <h3 class="faq__item-question faq__item-question--hide">Кто организатор? Какие сроки у&nbsp;программы?</h3>
             <p class="faq__item-answer">Программы, поддерживаемые проектом Маса, проводятся организаторами, которые
               фактически реализуют программы и несут ответственность за их успешное проведение. Сферы деятельности
               организаторов самые разные - университеты, колледжи и институты, туристические компании, молодежные
@@ -388,7 +394,7 @@
           <div class="faq__item">
             <h3 class="faq__item-question faq__item-question--hide">Как определяется стоимость программы?</h3>
             <p class="faq__item-answer">Полная стоимость определяется организаторами в зависимости от
-              направления. В большинстве случаев грант «Маса» не покрывает полную стоимость программы, и поэтому
+              направления.&nbsp;В&nbsp;большинстве&nbsp;случаев грант «Маса» не покрывает полную стоимость программы, и поэтому
               предусматривается определённая доля личного участия.</p>
           </div>
         </li>
@@ -404,7 +410,7 @@
         <li class="faq__list-item faq__list-item--fifth">
           <div class="faq__item">
             <h3 class="faq__item-question faq__item-question--hide">Признаётся ли учеба в рамках проекта для
-              дальнейшего обучения?</h3>
+              дальнейшего&nbsp;обучения?</h3>
             <p class="faq__item-answer">Университеты Израиля и западных стран признают академическую учебу в рамках
               проекта Маса, если организатор заявляет об академической аккредитации его программы. Ситуация в СНГ более
               сложная, и признание обучения зависит, как правило, от решения каждого отдельного учебного заведения.
@@ -416,7 +422,7 @@
         <li class="faq__list-item faq__list-item--sixth">
           <div class="faq__item">
             <h3 class="faq__item-question faq__item-question--hide">Как выглдядит полный процесс регистрации
-              на программу «Маса»?</h3>
+              на&nbsp;программу&nbsp;«Маса»?</h3>
             <p class="faq__item-answer">Выбор программы. Связь с координатором выбранной программы и запись на
               консульскую проверку. Заполнение анкеты на сайте Маса. Загрузить документы об успешном прохождении
               консульской проверки на портал участников через личный кабинет. Получение студенческой визы А2 в
@@ -455,9 +461,9 @@
           <cite>Мария Михайлова</cite>
           <p class="review__program-title">
             <span>Программа:</span>
-            Арт-Тель, февраль-сетнябрь 2017
+            Арт-Тель,&nbsp;февраль-сентябрь&nbsp;2017
           </p>
-          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев
+          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5&nbsp;месяцев
             «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
           <p class="review__program-text review__program-text--margin">С первой же встречи тебе дают понять - что ты не
             один, у тебя есть практически
@@ -511,9 +517,9 @@
           <cite>Анна Михайлова</cite>
           <p class="review__program-title">
             <span>Программа:</span>
-            Арт-Тель, февраль-сетнябрь 2017
+            Арт-Тель,&nbsp;февраль-сентябрь&nbsp;2017
           </p>
-          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев
+          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5&nbsp;месяцев
             «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
           <p class="review__program-text review__program-text--margin">С первой же встречи тебе дают понять - что ты не
             один, у тебя есть практически
@@ -567,9 +573,9 @@
           <cite>Ольга Михайлова</cite>
           <p class="review__program-title">
             <span>Программа:</span>
-            Арт-Тель, февраль-сетнябрь 2017
+            Арт-Тель,&nbsp;февраль-сентябрь&nbsp;2017
           </p>
-          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев
+          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5&nbsp;месяцев
             «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
           <p class="review__program-text review__program-text--margin">С первой же встречи тебе дают понять - что ты не
             один, у тебя есть практически
@@ -623,9 +629,9 @@
           <cite>Вера Михайлова</cite>
           <p class="review__program-title">
             <span>Программа:</span>
-            Арт-Тель, февраль-сетнябрь 2017
+            Арт-Тель,&nbsp;февраль-сентяябрь&nbsp;2017
           </p>
-          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев
+          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5&nbsp;месяцев
             «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
           <p class="review__program-text review__program-text--margin">С первой же встречи тебе дают понять - что ты не
             один, у тебя есть практически
@@ -679,9 +685,9 @@
           <cite>Виктор Михайлов</cite>
           <p class="review__program-title">
             <span>Программа:</span>
-            Арт-Тель, февраль-сетнябрь 2017
+            Арт-Тель,&nbsp;февраль-сентябрь&nbsp;2017
           </p>
-          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев
+          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5&nbsp;месяцев
             «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
           <p class="review__program-text review__program-text--margin">С первой же встречи тебе дают понять - что ты не
             один, у тебя есть практически
@@ -735,9 +741,9 @@
           <cite>Ирина Михайлова</cite>
           <p class="review__program-title">
             <span>Программа:</span>
-            Арт-Тель, февраль-сетнябрь 2017
+            Арт-Тель,&nbsp;февраль-сетнябрь&nbsp;2017
           </p>
-          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев
+          <p class="review__program-text">Долго выбирая программу, на которую ехать - я определилась, взяла на 5&nbsp;месяцев
             «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.</p>
           <p class="review__program-text review__program-text--margin">С первой же встречи тебе дают понять - что ты не
             один, у тебя есть практически
@@ -802,7 +808,7 @@
           </picture>
           <div class="contacts__curator-info">
             <p class="contacts__curator-name"><span>Ваш куратор:</span>Анна Горелик</p>
-            <p class="contacts__curator-adress">Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</p>
+            <p class="contacts__curator-adress">Новосибирск, ул. Щетинкина 68, культурный центр&nbsp;«Бейт&nbsp;Менахем»</p>
 
             <ul class="contacts__curator-networks">
               <li class="contacts__curator-networks-item">
@@ -834,8 +840,8 @@
           </div>
         </div>
         <p class="contacts__location-description">Куратор является опытным специалистом агентства Сохнут
-          и знает о проекте «Маса» всё! Свяжитесь с
-          куратором, узнайте подробнее о программах и выберите свою !</p>
+          и&nbsp;знает&nbsp;о&nbsp;проекте «Маса» всё! Свяжитесь с
+          куратором, узнайте&nbsp;подробнее&nbsp;о&nbsp;программах и выберите свою !</p>
       </div>
       <div class="contacts__map">
         <picture>
@@ -853,7 +859,7 @@
     </div>
     <div class="contacts__callback">
       <div class="contacts__callback-description">
-        <h3>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</h3>
+        <h3>Оставьте ваши контакты, если у вас остались&nbsp;вопросы&nbsp;—&nbsp;мы&nbsp;на&nbsp;них ответим!</h3>
         <p>Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
       </div>
       <form class="contacts__callback-form">
@@ -889,7 +895,7 @@
         <a href="#">
           <span class="visually-hidden">Facebook</span>
           <svg class="page-footer__networks-facebook" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use class="review__icon-fill" xlink:href="#facebook"></use>
+            <use class="page-footer__icon-fill" xlink:href="#facebook"></use>
           </svg>
         </a>
       </li>
@@ -897,7 +903,7 @@
         <a href="#">
           <span class="visually-hidden">Twitter</span>
           <svg class="page-footer__networks-twitter" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use class="review__icon-fill" xlink:href="#twitter"></use>
+            <use class="page-footer__icon-fill" xlink:href="#twitter"></use>
           </svg>
         </a>
       </li>
@@ -905,7 +911,7 @@
         <a href="#">
           <span class="visually-hidden">Instagram</span>
           <svg class="page-footer__networks-instagram" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use class="review__icon-fill" xlink:href="#instagram"></use>
+            <use class="page-footer__icon-fill" xlink:href="#instagram"></use>
           </svg>
         </a>
       </li>

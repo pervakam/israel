@@ -8,6 +8,8 @@
   var programSwiperWrapper = document.querySelector('.programs__name');
   var programTypeButton = document.querySelectorAll('.programs__name-item');
   var programTypeDescription = document.querySelectorAll('.programs__item-description');
+  var intorScrollButton = document.querySelector('.page-header__scroll');
+  var programsSection = document.querySelector('.programs');
 
   programTypeButton.forEach(function (button, i) {
     button.addEventListener('click', function () {
@@ -16,4 +18,11 @@
     });
   });
 
+  intorScrollButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    programsSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
 })();

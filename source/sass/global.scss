@@ -22,6 +22,12 @@ body {
   overflow-y: hidden;
 }
 
+@media (max-width: $tablet-max-width) {
+  body {
+    min-width: $tablet-min-width;
+  }
+}
+
 @media (max-width: $mobile-max-width) {
   body {
     min-width: $mobile-min-width;

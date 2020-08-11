@@ -2,6 +2,7 @@
 
 (function () {
   var body = document.querySelector('body');
+  var callback = document.querySelector('.callback');
   var callbackModalHide = document.querySelector('.callback-modal-hide');
   var callbackModal = document.querySelector('.callback-modal');
   var callbackCloseButton = document.querySelector('.callback-modal__close');
@@ -10,8 +11,10 @@
   var callbackFormNameField = callbackForm.querySelector('input[name="name-field"]');
 
   var closeCallbackModal = function () {
+    callback.classList.remove('callback__overlay');
     callbackModal.classList.add('callback-modal-hide');
     body.classList.remove('no-scroll');
+
     callbackCloseButton.removeEventListener('click', closeCallbackModal);
     window.removeEventListener('keydown', escCallbackModalHandler);
     document.removeEventListener('click', overlayCallbackModalHandler);
@@ -37,6 +40,7 @@
   };
 
   var openCallbackModal = function () {
+    callback.classList.add('callback__overlay');
     body.classList.add('no-scroll');
     callbackModal.classList.remove('callback-modal-hide');
     callbackFormNameField.focus();
@@ -51,6 +55,6 @@
     body: body,
     callbackOpenButton: callbackOpenButton,
     closeCallbackModal: closeCallbackModal,
-    callbackModalHide: callbackModalHide,
+    callbackModalHide: callbackModalHide
   }
 })();

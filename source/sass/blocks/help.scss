@@ -72,6 +72,8 @@
   box-sizing: border-box;
   padding: 7px 0 6px 40px;
   width: 477px;
+  box-shadow: none;
+
 
   &::placeholder {
     font-weight: 500;
@@ -83,9 +85,6 @@
 
   &:focus {
     border: 2px solid $yellow;
-    //&:invalid {
-    //  border: 2px solid $invalid-input;
-    //}
   }
 
   &:hover {
@@ -124,15 +123,33 @@
   justify-content: flex-start;
   padding-top: 160px;
   padding-bottom: 300px;
+  position: relative;
 
   background-image: url("../img/help/about-moving-bg-desktop@1x.png");
   background-repeat: no-repeat;
-  background-size: 1366px 1208px;
+  background-size: 100% 1208px;
   background-position-y: -43px;
   background-position-x: 0;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/help/about-moving-bg-desktop@2x.png");
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 215px;
+    height: 254px;
+    background-image: url("../img/help/stamp-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: 216px 254px;
+    top: 365px;
+    right: 0;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/help/stamp-desktop@2x.png");
+    }
   }
 }
 
@@ -152,24 +169,6 @@
   width: 100%;
   max-width: 552px;
   text-align: left;
-  position: relative;
-
-  &::after {
-    position: absolute;
-    display: block;
-    content: "";
-    width: 215px;
-    height: 254px;
-    background-image: url("../img/help/stamp-desktop@1x.png");
-    background-repeat: no-repeat;
-    background-size: 216px 254px;
-    top: 208px;
-    right: -111px;
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/help/stamp-desktop@2x.png");
-    }
-  }
 }
 
 .help__demands {
@@ -278,13 +277,15 @@
   margin: 0;
   margin-left: -2px;
   margin-top: -8px;
-  width: 100%;
-  max-width: 520px;
   border-left: 4px solid $yellow;
   padding-left: 14px;
 }
 
 @media (max-width: $tablet-max-width) {
+  .help {
+    max-width: $tablet-max-width;
+  }
+
   .help__callback {
     flex-direction: column;
   }
@@ -357,6 +358,19 @@
     margin: 0 auto;
 
     background-image: none;
+
+    &::after {
+      width: 216px;
+      height: 199px;
+      background-image: url("../img/help/stamp-mobile@1x.png");
+      background-size: 216px 199px;
+      top: 330px;
+      right: 0;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/help/stamp-mobile@2x.png");
+      }
+    }
   }
 
   .help__info picture {
@@ -367,19 +381,6 @@
     width: 100%;
     max-width: 552px;
     text-align: left;
-
-    &::after {
-      width: 216px;
-      height: 199px;
-      background-image: url("../img/help/stamp-mobile@1x.png");
-      background-size: 216px 199px;
-      top: 330px;
-      right: -17px;
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/help/stamp-mobile@2x.png");
-      }
-    }
   }
 
   .help__demands {

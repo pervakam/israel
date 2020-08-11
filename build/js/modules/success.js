@@ -1,6 +1,7 @@
 'use strict';
 
 (function () {
+  var success = document.querySelector('.success');
   var successModal = document.querySelector('.success-modal');
   var successCloseButton = document.querySelector('.success-modal__close');
   var successOkButton = document.querySelector('.success-modal__ok');
@@ -8,6 +9,7 @@
   var closeSuccessModal = function () {
     successModal.classList.add('success-modal-hide');
     window.callback.body.classList.remove('no-scroll');
+    success.classList.remove('success__overlay');
 
     successCloseButton.removeEventListener('click', closeSuccessModal);
     successOkButton.removeEventListener('click', closeSuccessModal);
@@ -37,6 +39,7 @@
 
   var showSuccessModal = function (evt) {
     evt.preventDefault();
+    success.classList.add('success__overlay');
     successModal.classList.remove('success-modal-hide');
     window.callback.body.classList.add('no-scroll');
 

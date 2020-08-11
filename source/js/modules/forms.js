@@ -9,9 +9,9 @@
     var formNameInput = evt.target.querySelector('input[type="text"]');
 
     evt.preventDefault();
-    if (!window.callback.callbackModalHide) {
-      window.callback.closeCallbackModal();
-    }
+
+    window.callback.closeCallbackModal();
+
     window.success.showSuccessModal(evt);
 
     localStorage.setItem(formTelInput.type, formTelInput.value);
@@ -20,7 +20,6 @@
     }
 
     forms.forEach(function (form) {
-      form.reset();
     })
 
   };
@@ -50,9 +49,6 @@
     form.addEventListener('submit', showSuccess);
   });
   window.addEventListener('load', setValue);
-  formInputs.forEach(function (input) {
-    input.addEventListener('click', setValue);
-  });
 
 
 ////// валидация ввода номера телефона ///////////
